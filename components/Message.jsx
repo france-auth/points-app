@@ -8,7 +8,7 @@ const Message = () => {
     const y = 6; // Max number of messages
 
     return (
-        <div className='p-3 w-full flex flex-col justify-center items-center'>
+        <div className='p-3 w-full flex flex-col justify-center items-center min-h-96'>
 
             {/* User's Message */}
             <div className='w-full px-3 py-2 flex flex-col items-end mt-0'>
