@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    color: #004A50;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* styles/globals.css */
+@keyframes flyUpFadeAway {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-135px);
+    }
+}
+.animate-fly-up-fade {
+    animation: flyUpFadeAway 1.5s ease-out forwards;
+}
