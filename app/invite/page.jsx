@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { navLinks } from '@/data';
 import Link from 'next/link';
 
-const Ranking = () => {
+const Invite = () => {
     return (
         <main>
             <NavBar className="sticky top-0" />
@@ -12,7 +12,7 @@ const Ranking = () => {
     )
 }
 
-export default Ranking
+export default Invite
 
 
 
@@ -23,7 +23,7 @@ export default Ranking
 const NavBar = () => {
 
     // Step 1: Set the first item as active by default
-    const [activeIndex, setActiveIndex] = useState(navLinks[3].id);
+    const [activeIndex, setActiveIndex] = useState(navLinks[4].id);
 
     const handleNavClick = (id) => {
         setActiveIndex(id); // Step 2: Update activeIndex on click

@@ -31,7 +31,7 @@ const Message = () => {
                 />
 
                 <button type="submit"
-                className='font-bold absolute right-2 mr-3 mt-[6px] top-1/2 transform -translate-y-1/2'>SEND</button>
+                className='font-bold absolute right-2 mr-3 mt-[6px] top-1/2 transform -translate-y-1/2 cursor-pointer'>SEND</button>
             </form>
         </div>
     )
