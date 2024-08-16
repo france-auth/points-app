@@ -28,7 +28,7 @@ const InviteModal = ({isOpen, isClosed}) => {
                     {inviteRewards.map((reward) => (
                         <li
                         key={reward.id}
-                        className='my-3 flex list-disc justify-center'>
+                        className='my-3 flex justify-center'>
                             {reward.invite}
                         </li>
                     ))}

@@ -234,21 +234,25 @@ export const aura = [
     {
         id: 1,
         aura: rectangle,
+        name: "aura1",
         price: "100P",
     },
     {
         id: 2,
         aura: rectangle,
+        name: "aura2",
         price: "500P",
     },
     {
         id: 3,
         aura: rectangle,
+        name: "aura3",
         price: "1,000P",
     },
     {
         id: 4,
         aura: rectangle,
+        name: "aura4",
         price: "2,000P",
     },
 ];
@@ -256,22 +260,26 @@ export const aura = [
 export const background = [
     {
         id: 1,
-        bg: "check",
+        bg: rectangle,
+        name: "check",
         price: "100P",
     },
     {
         id: 2,
-        bg: "stripe",
+        bg: rectangle,
+        name: "stripe",
         price: "500P",
     },
     {
         id: 3,
-        bg: "dot",
+        bg: rectangle,
+        name: "dot",
         price: "1,000P",
     },
     {
         id: 4,
-        bg: "d",
+        bg: rectangle,
+        name: "d",
         price: "2,000P",
     },
 ];
@@ -279,26 +287,29 @@ export const background = [
 export const accessories = [
     {
         id: 1,
-        acc: "glass",
+        acc: rectangle,
+        name: "glass",
         price: "100P",
     },
     {
         id: 2,
-        acc: "hat",
+        acc: rectangle,
+        name: "hat",
         price: "500P",
     },
     {
         id: 3,
-        acc: "blush",
+        acc: rectangle,
+        name: "blush",
         price: "1,000P",
     },
     {
         id: 4,
-        acc: "ribbon",
+        acc: rectangle,
+        name: "ribbon",
         price: "2,000P",
     },
 ];
-
 
 export const rankPageButtons = [
     {
@@ -315,5 +326,50 @@ export const rankPageButtons = [
     },
     {
         page: 5
+    },
+]
+
+export const tapBoosts = [
+    {
+        img: rectangle,
+        name: "Chat Fill Potion",
+        xp: "+1,000P",
+        arrow: ">"
+    },
+    {
+        img: rectangle,
+        name: "Chat Fill Potion",
+        xp: "+10,000P",
+        arrow: ">"
+    },
+]
+
+export const chatPotions = [
+    {
+        img: rectangle,
+        name: "Chat Fill Potion",
+        xp: "+1,000P",
+        arrow: ">"
+    },
+    {
+        img: rectangle,
+        name: "Chat Fill Potion",
+        xp: "+10,000P",
+        arrow: ">"
+    },
+]
+
+export const batteryPotions = [
+    {
+        img: rectangle,
+        name: "Battery Fill Potion",
+        xp: "+500",
+        arrow: ">"
+    },
+    {
+        img: rectangle,
+        name: "Battery Fill Potion (100%)",
+        xp: "+1,000P",
+        arrow: ">"
     },
 ]
