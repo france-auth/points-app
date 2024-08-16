@@ -10,9 +10,19 @@ const Invite = () => {
 
     const x = 5; // Number of referrals
 
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(true);
+    }
+    const closeModal = () => {
+        setShowModal(false);
+    }
+
 
     return (
         <main>
+            <InviteModal isOpen={showModal} isClosed={closeModal}/>
             <NavBar />
             <div className='flex flex-col bg-[#9CB2A4]  min-h-full p-3'>
                 <div className='flex flex-col items-center p-3 pt-9 w-full bg-[#CEE4D6] rounded-xl'>
@@ -23,7 +33,8 @@ const Invite = () => {
                     {/* SHARE BUTTON */}
                     <button type="button"
                     className='text-[#FFFFFF] w-full hover:bg-[#02363b] bg-[#004A50] rounded-2xl px-5 py-3 mt-5 cursor-pointer'
-                    /*onClick={}*/>SHARE IT TO FRENS</button>
+                    onClick={openModal}
+                    >SHARE IT TO FRENS</button>
                     
                     <div className='flex w-full justify-start mb-2'>
                         <p className='flex mt-6 ml-11 font-semibold text-base'>Frens List</p>
@@ -45,14 +56,13 @@ const Invite = () => {
                                     <p>{invite.points} <span className='font-semibold '>{invite.rank}</span></p>
                                 </div>
                             </div>
-                            <div className='flex items-center'>{invite.earnedXp}</div>
+                            <div 
+                            className='flex items-center'>{invite.earnedXp}</div>
                         </div>
                     ))}
                 </div>
                 </div>
             </div>
-
-            <InviteModal />
         </main>
     )
 }

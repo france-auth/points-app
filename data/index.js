@@ -136,7 +136,7 @@ export const invites = [
     },
 ];
 
-export const invitationRewards = [
+export const inviteRewards = [
     {
         id: 1,
         invite: "1 invite: 10 points per person,  no bonus",
