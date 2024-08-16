@@ -18,7 +18,7 @@ const Miner = () => {
 
         setTimeout(() => {
             setIsAnimating(false)
-        }, 2000);   // Animation duration (2 seconds)
+        }, 3000);   // Animation duration (3 seconds)
 };
 
     return (

@@ -20,5 +20,5 @@
     }
 }
 .animate-fly-up-fade {
-    animation: flyUpFadeAway 1.5s ease-out forwards;
+    animation: flyUpFadeAway 3s ease-out forwards;
 }
