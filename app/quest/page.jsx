@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { navLinks, quests, missions} from '@/data';
 import Link from 'next/link';
 import Image from 'next/image';
-import { userIcon } from '@/public/assets/images';
 
 const Quest = () => {
     return (
@@ -35,7 +34,7 @@ const Quest = () => {
                 <h1 className='font-bold mt-14'>MISSION</h1>
                 <p>LEVEL-UP with your soul</p>
 
-                <div className='flex flex-col mt-5 mb-9 w-full items-center'>
+                <div className='flex flex-col mt-5 mb-6 w-full items-center'>
                     {missions.map((mission) => (
                         <div key={mission.id}
                         className='flex w-[22rem] justify-between mb-1 bg-[#C4DACC] border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer'>
