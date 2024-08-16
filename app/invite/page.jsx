@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { navLinks, invites } from '@/data';
 import Link from 'next/link';
 import Image from 'next/image';
-import InviteModal from '@/components/inviteModal';
+import InviteModal from '@/components/InviteModal';
 
 const Invite = () => {
 
