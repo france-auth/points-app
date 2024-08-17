@@ -24,7 +24,7 @@ const NavBar = ({ navLinks }) => {
 
     return (
         <div>
-            <ul className="flex px-2 py-3 mb-4 list-none justify-center">
+            <ul className="flex px-2 py-3 mt-1 mb-3 list-none justify-center">
             {navLinks.map((nav) => (
                 <Link
                 key={nav.id}

@@ -14,7 +14,7 @@ const InviteModal = ({isOpen, isClosed}) => {
                     <Image 
                     src={backIcon}
                     alt='back arrow'
-                    width={40}
+                    width={45}
                     className='flex cursor-pointer'
                     onClick={isClosed}/>
 

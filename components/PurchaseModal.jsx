@@ -13,7 +13,7 @@ const PurchaseModal = ({show, close, item}) => {
                     <Image 
                     src={backIcon}
                     alt='back arrow'
-                    width={40}
+                    width={50}
                     className='flex cursor-pointer'
                     onClick={close}/>
 

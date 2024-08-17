@@ -1,11 +1,11 @@
 "use client"
 
 import React, { useState } from 'react';
-import { navLinks, invites } from '@/data';
-import Link from 'next/link';
+import { invites } from '@/data';
 import Image from 'next/image';
 import InviteModal from '@/components/InviteModal';
 import Layout from '@/components/Layout';
+import NavBar from '@/components/NavBar';
 
 const Invite = () => {
 
@@ -69,41 +69,3 @@ const Invite = () => {
 }
 
 export default Invite
-
-
-
-
-
-
-
-
-const NavBar = () => {
-
-    // Step 1: Set the first item as active by default
-    const [activeIndex, setActiveIndex] = useState(navLinks[4].id);
-
-    const handleNavClick = (id) => {
-        setActiveIndex(id); // Step 2: Update activeIndex on click
-    };
-    return (
-        <div className='sticky top-0 z-50'>
-            <ul className="flex px-2 py-3 mb-1 list-none justify-center">
-            {navLinks.map((nav) => (
-                <Link
-                key={nav.id}
-                href={`/${nav.id}`}
-                onClick={() => handleNavClick(nav.id)}
-                className={`flex px-2 py-2 ${
-                    nav.id === activeIndex
-                    ? "underline font-bold"
-                    : ""
-                }`}
-                >
-                {nav.title}
-                </Link>
-            ))}
-            </ul>
-            <hr className='border-[#004A50]' />
-        </div>
-    )
-};
