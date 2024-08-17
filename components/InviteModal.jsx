@@ -19,7 +19,7 @@ const InviteModal = ({isOpen, isClosed}) => {
                     onClick={isClosed}/>
 
                     <p
-                    className='flex justify-center font-semibold mt-4 ml-11 mx-auto'>
+                    className='flex justify-center font-semibold mt-4 mb-3 ml-11 mx-auto'>
                         Invitation Rewards:
                     </p>
                 </div>
@@ -28,7 +28,7 @@ const InviteModal = ({isOpen, isClosed}) => {
                     {inviteRewards.map((reward) => (
                         <li
                         key={reward.id}
-                        className='xs:my-2 xr:text-[15px] xr:my-2 xs:text-[14px] flex justify-center'>
+                        className='xs:my-3 xr:text-[15px] xr:my-2 xs:text-[14px] flex justify-center'>
                             {reward.invite}
                         </li>
                     ))}

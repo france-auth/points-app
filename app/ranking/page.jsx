@@ -55,7 +55,7 @@ const Ranking = () => {
 
                     {/** RANKINGS */}
                     <div className='flex w-full justify-center'>
-                        <div className='flex flex-col mt-3 w-[25rem] items-center'>
+                        <div className='flex flex-col mt-3 w-[23.5rem] items-center'>
                             {rankings.map((ranking, index) => (
                                 <div key={ranking.id}
                                 className={`flex w-full border text-sm border-[#004A50] px-5 py-5 cursor-pointer justify-between bg-[#C4DACC]
@@ -83,7 +83,7 @@ const Ranking = () => {
                     {/** RANKING PAGE NAV BUTTONS */}
                     <div className='flex justify-center items-center mt-4 mb-2'>
                         <ul
-                        className='flex justify-evenly items-center w-[20.5rem]'>
+                        className='flex justify-evenly items-center w-[20rem]'>
                             {rankPageButtons.map((rankPage, id) => (
                                 <li
                                 key={rankPage.page}
