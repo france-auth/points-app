@@ -1,0 +1,41 @@
+import React from 'react'
+
+const HashModal = ({isOpen, isClosed}) => {
+
+    return (!isOpen ? null : (
+        <div
+        className='fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
+            <div
+            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-[23rem]'>
+                <div className='flex'>
+                    <Image 
+                    src={backIcon}
+                    alt='back arrow'
+                    width={40}
+                    className='flex cursor-pointer'
+                    onClick={isClosed}/>
+                </div>
+
+                <div className='flex justify-between mt-3 mb-1 items-center'>
+                    <p
+                    className='flex ml-3'>
+                        LOVE
+                    </p>
+                    <Image src={heartsModal} 
+                    className='mr-3'/>
+                </div>
+
+                <div className='mx-3 text-[14.5px]'>
+                        <p
+                        className='my-3 flex justify-center'>
+                            Grow your bond with your Soul by petting and chatting, and gifting items.
+                        </p>
+
+                        <p className='mb-2'>As you build affection, you'll earn more points. Who knows? Higher affection might bring some nice surprises your way!</p>
+                </div>
+            </div>
+        </div>
+    ))
+}
+
+export default HashModal

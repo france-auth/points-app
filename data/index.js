@@ -1,7 +1,7 @@
 import {miner,
     userIcon,
     rectangle,
-    backIcon} from '@/public/assets/images/index'
+    emptyHeart, fullHeart} from '@/public/assets/images/index'
 
 export const hashs = [
     {
@@ -378,3 +378,27 @@ export const batteryPotions = [
         arrow: ">"
     },
 ]
+
+export const love = [
+    {
+        id: 1,
+        img: fullHeart
+    },
+    {
+        id: 2,
+        img: emptyHeart
+    },
+    {
+        id: 3,
+        img: emptyHeart
+    },
+    {
+        id: 4,
+        img: emptyHeart
+    },
+    {
+        id: 5,
+        img: emptyHeart
+    }
+]
+

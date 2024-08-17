@@ -1,15 +1,30 @@
 import { hashs } from '@/data'
-import React from 'react'
+import React, { useState } from 'react'
+import HashModal from '@/components/HashModal';
 
 const HashTags = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(true);
+    }
+    const closeModal = () => {
+        setShowModal(false);
+    }
+
     return (
-        <ul className='flex w-full py-3 justify-evenly'>
+        <main className='w-full flex justify-center items-center'>
+            <HashModal isOpen={showModal} isClosed={closeModal} />
+            <ul className='flex py-3 justify-between'>
             {hashs.map((x) => (
             <li key={x.id}
-            className= ' text-sm overflow-x-visible px-3 py-1 rounded-2xl bg-[#B8D2C3]'>
-                {x.hash}
+            className= 'mx-1 text-sm px-3 py-2 rounded-2xl bg-[#B8D2C3]'>
+                <p>{x.hash}</p>
             </li>
-        ))}</ul>
+            ))}
+        </ul>
+        </main>
     )
 }
 

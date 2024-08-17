@@ -23,3 +23,10 @@
 .animate-fly-up-fade {
     animation: flyUpFadeAway 3s ease-out forwards;
 }
+
+
+/* Responsiveness for small screens */
+
+@media (max-width: 400 ) {
+    
+}

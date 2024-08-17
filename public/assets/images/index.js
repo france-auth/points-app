@@ -6,6 +6,9 @@ import purchase from './purchase.svg'
 import emptyHeart from './emptyheart.svg'
 import fullHeart from './fullheart.svg'
 import heartsModal from './heartsModal.svg'
+import questionMarkModal from './questionMarkModal.svg'
+import batteryBars from "./batteryBars.svg";
+import batteryModal from "./batteryModal.svg";
 
 export {
     miner,
@@ -15,5 +18,8 @@ export {
     purchase,
     emptyHeart,
     fullHeart,
-    heartsModal
+    heartsModal,
+    questionMarkModal,
+    batteryModal,
+    batteryBars
 }

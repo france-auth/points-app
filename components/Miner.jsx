@@ -23,7 +23,7 @@ const Miner = () => {
 
     return (
         <div className='flex w-full justify-center items-center bg-[#9CB2A4] border-y-[1px] border-[#004A50] p-7'>
-            <div className='flex bg-[#C4DACC] justify-center items-center w-[12.5rem] h-[14.5rem] rounded-3xl border-[1px] border-[#004A50] cursor-pointer' onClick={handleClick}>
+            <div className='flex bg-[#C4DACC] justify-center items-center w-[12.5rem] h-[14.5rem] rounded-3xl my-2 border-[1px] border-[#004A50] cursor-pointer' onClick={handleClick}>
                 <Image 
                 src={miner}
                 alt='miner image'/>
