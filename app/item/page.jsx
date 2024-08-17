@@ -1,14 +1,32 @@
 "use client"
 
 import React, { useState } from 'react';
-import { navLinks, aura, background, accessories, tapBoosts, chatPotions, batteryPotions } from '@/data';
-import Link from 'next/link';
+import { aura, background, accessories, tapBoosts, chatPotions, batteryPotions } from '@/data';
+import NavBar from '@/components/NavBar';
+import PurchaseModal from '@/components/PurchaseModal';
 import Image from 'next/image';
+import Layout from '@/components/Layout';
 
-const Quest = () => {
+
+
+const Item = () => {
+
+    const [showModal, setShowModal] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    const openModal = (item) => {
+        setSelectedItem(item)
+        setShowModal(true);
+    };
+    const closeModal = () => {
+        setShowModal(false);
+        setSelectedItem(null)
+    };
+
+
     return (
-        <main>
-            <NavBar />
+        <Layout>
+            <PurchaseModal show={showModal} close={closeModal} item={selectedItem}/>
 
             {/** CLOSET - Aura */}
             <div className='bg-[#9CB2A4] min-h-screen p-4'>
@@ -23,7 +41,8 @@ const Quest = () => {
                         <div className='flex justify-around items-center '>
                             {aura.map((aura, index) => (
                                 <div key={index}
-                                className='flex flex-col justify-center items-center cursor-pointer'>
+                                className='flex flex-col justify-center items-center cursor-pointer'
+                                onClick={() => openModal(aura)}>
                                     <Image src={aura.aura} />
                                     <p>{aura.name}</p>
                                     <p>{aura.price}</p>
@@ -43,7 +62,8 @@ const Quest = () => {
                         <div className='flex justify-around items-center '>
                             {background.map((bg, index) => (
                                 <div key={index}
-                                className='flex flex-col justify-center items-center cursor-pointer'>
+                                className='flex flex-col justify-center items-center cursor-pointer'
+                                onClick={() => openModal(bg)}>
                                     <Image src={bg.bg} />
                                     <p>{bg.name}</p>
                                     <p>{bg.price}</p>
@@ -65,7 +85,9 @@ const Quest = () => {
                         <div className='flex justify-around items-center '>
                             {accessories.map((acc, index) => (
                                 <div key={index}
-                                className='flex flex-col justify-center items-center cursor-pointer'>
+                                className='flex flex-col justify-center items-center cursor-pointer'
+                                onClick={() => openModal(acc)}
+                                >
                                     <Image src={acc.acc} />
                                     <p>{acc.name}</p>
                                     <p>{acc.price}</p>
@@ -149,45 +171,8 @@ const Quest = () => {
                     <hr className='flex flex-col items-center justify-center mx-auto mt-4 w-[25rem] border-[#9CB2A4]'></hr>
                 </div>
             </div>
-        </main>
+        </Layout>
     )
 }
 
-export default Quest
-
-
-
-
-
-
-
-const NavBar = () => {
-
-    // Step 1: Set the first item as active by default
-    const [activeIndex, setActiveIndex] = useState(navLinks[1].id);
-
-    const handleNavClick = (id) => {
-        setActiveIndex(id); // Step 2: Update activeIndex on click
-    };
-    return (
-        <div className='sticky top-0 z-50'>
-            <ul className="flex px-2 py-3 mb-1 list-none justify-center">
-            {navLinks.map((nav) => (
-                <Link
-                key={nav.id}
-                href={`/${nav.id}`}
-                onClick={() => handleNavClick(nav.id)}
-                className={`flex px-2 py-2 ${
-                    nav.id === activeIndex
-                    ? "underline font-bold"
-                    : ""
-                }`}
-                >
-                {nav.title}
-                </Link>
-            ))}
-            </ul>
-            <hr className='border-[#004A50]' />
-        </div>
-    )
-};
+export default Item

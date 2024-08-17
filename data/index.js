@@ -24,24 +24,29 @@ export const hashs = [
 
 export const navLinks = [
     {
-        id: '',
-        title: 'MESSAGE'
+        id: 1,
+        title: 'MESSAGE',
+        path: "/"
     },
     {
-        id: 'item',
-        title: 'ITEM'
+        id: 2,
+        title: 'ITEM',
+        path: "/item"
     },
     {
-        id: 'quest',
-        title: 'QUEST'
+        id: 3,
+        title: 'QUEST',
+        path: "/quest"
     },
     {
-        id: 'ranking',
-        title: 'RANKING'
+        id: 4,
+        title: 'RANKING',
+        path: "/ranking"
     },
     {
-        id: 'invite',
-        title: 'INVITE'
+        id: 5,
+        title: 'INVITE',
+        path: "/invite"
     },
 ]
 

@@ -5,6 +5,7 @@ import { navLinks, invites } from '@/data';
 import Link from 'next/link';
 import Image from 'next/image';
 import InviteModal from '@/components/InviteModal';
+import Layout from '@/components/Layout';
 
 const Invite = () => {
 
@@ -21,7 +22,7 @@ const Invite = () => {
 
 
     return (
-        <main>
+        <Layout>
             <InviteModal isOpen={showModal} isClosed={closeModal}/>
             <NavBar />
             <div className='flex flex-col bg-[#9CB2A4]  min-h-full p-3'>
@@ -63,7 +64,7 @@ const Invite = () => {
                 </div>
                 </div>
             </div>
-        </main>
+        </Layout>
     )
 }
 

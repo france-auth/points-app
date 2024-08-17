@@ -1,9 +1,8 @@
 "use client"
 
-import React, { useState } from 'react';
-import { navLinks, rankings, rankPageButtons } from '@/data';
-import { userIcon } from '@/public/assets/images'; 
-import Link from 'next/link';
+import {rankings, rankPageButtons } from '@/data';
+import { userIcon } from '@/public/assets/images';
+import Layout from '@/components/Layout';
 import Image from 'next/image';
 
 const Ranking = () => {
@@ -13,8 +12,7 @@ const Ranking = () => {
 
 
     return (
-        <main>
-            <NavBar />
+        <Layout>
             <div className='bg-[#9CB2A4] min-h-screen p-4'>
                 <div className='w-full bg-transparent flex flex-col'>
                     <div className='flex justify-center items-center'>
@@ -105,45 +103,8 @@ const Ranking = () => {
                     </div>
                 </div>
             </div>
-        </main>
+        </Layout>
     )
 }
 
 export default Ranking
-
-
-
-
-
-
-
-const NavBar = () => {
-
-    // Step 1: Set the first item as active by default
-    const [activeIndex, setActiveIndex] = useState(navLinks[3].id);
-
-    const handleNavClick = (id) => {
-        setActiveIndex(id); // Step 2: Update activeIndex on click
-    };
-    return (
-        <div className='sticky top-0 z-50'>
-            <ul className="flex px-2 py-3 mb-1 list-none justify-center">
-            {navLinks.map((nav) => (
-                <Link
-                key={nav.id}
-                href={`/${nav.id}`}
-                onClick={() => handleNavClick(nav.id)}
-                className={`flex px-2 py-2 ${
-                    nav.id === activeIndex
-                    ? "underline font-bold"
-                    : ""
-                }`}
-                >
-                {nav.title}
-                </Link>
-            ))}
-            </ul>
-            <hr className='border-[#004A50]' />
-        </div>
-    )
-};

@@ -1,14 +1,13 @@
 "use client"
 
-import React, { useState } from 'react';
-import { navLinks, quests, missions} from '@/data';
-import Link from 'next/link';
+import React from 'react';
+import {quests, missions} from '@/data';
 import Image from 'next/image';
+import Layout from '@/components/Layout';
 
 const Quest = () => {
     return (
-        <main>
-            <NavBar />
+        <Layout>
             <div className='flex flex-col items-center p-3 min-h-screen max-w-full bg-[#9CB2A4]'>
                 <h1 className='font-bold mt-4'>DAILY CHECK IN</h1>
                 <p>Get your daily points</p>
@@ -51,45 +50,8 @@ const Quest = () => {
                     ))}
                 </div>
             </div>
-        </main>
+        </Layout>
     )
 }
 
 export default Quest
-
-
-
-
-
-
-
-const NavBar = () => {
-
-    // Step 1: Set the first item as active by default
-    const [activeIndex, setActiveIndex] = useState(navLinks[2].id);
-
-    const handleNavClick = (id) => {
-        setActiveIndex(id); // Step 2: Update activeIndex on click
-    };
-    return (
-        <div className='sticky top-0 z-50'>
-            <ul className="flex px-2 py-3 mb-1 list-none justify-center">
-            {navLinks.map((nav) => (
-                <Link
-                key={nav.id}
-                href={`/${nav.id}`}
-                onClick={() => handleNavClick(nav.id)}
-                className={`flex px-2 py-2 ${
-                    nav.id === activeIndex
-                    ? "underline font-bold"
-                    : ""
-                }`}
-                >
-                {nav.title}
-                </Link>
-            ))}
-            </ul>
-            <hr className='border-[#004A50]' />
-        </div>
-    )
-};
