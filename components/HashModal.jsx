@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
+import { backIcon, hashtags } from '@/public/assets/images';
+
+
 
 const HashModal = ({isOpen, isClosed}) => {
 
@@ -18,20 +22,25 @@ const HashModal = ({isOpen, isClosed}) => {
 
                 <div className='flex justify-between mt-3 mb-1 items-center'>
                     <p
-                    className='flex ml-3'>
-                        LOVE
+                    className='flex ml-3 my-3 font-medium'>
+                        Characteristics
                     </p>
-                    <Image src={heartsModal} 
-                    className='mr-3'/>
                 </div>
+
+                <Image
+                src={hashtags}
+                alt='hashtags'
+                className='w-[17rem] mb-3 px-2'/>
 
                 <div className='mx-3 text-[14.5px]'>
                         <p
                         className='my-3 flex justify-center'>
-                            Grow your bond with your Soul by petting and chatting, and gifting items.
+                            Chat with your clone and shape it's personality!
                         </p>
 
-                        <p className='mb-2'>As you build affection, you'll earn more points. Who knows? Higher affection might bring some nice surprises your way!</p>
+                        <p className='mb-2'>
+                            Starting with a few traits, your interactions create a unique Soul just for you , with it's character growing through AI-generated keywords.
+                        </p>
                 </div>
             </div>
         </div>

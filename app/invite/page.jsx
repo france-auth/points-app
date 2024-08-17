@@ -45,7 +45,7 @@ const Invite = () => {
                     <div className='flex flex-col mt-0 w-full items-center cursor-pointer'>
                     {invites.map((invite) => (
                         <div key={invite.id}
-                        className='flex w-[23rem] justify-between bg-[#C4DACC] border rounded-xl px-5 py-5'>
+                        className='flex w-full justify-between bg-[#C4DACC] border rounded-xl px-5 py-5'>
                             <div className='flex justify-evenly text-sm'>
                                 <Image 
                                 src={invite.icon}

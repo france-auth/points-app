@@ -30,7 +30,7 @@ const Item = () => {
 
             {/** CLOSET - Aura */}
             <div className='bg-[#9CB2A4] min-h-screen p-4'>
-                <div className='w-full bg-[#C4DACC] flex flex-col rounded-xl border border-[#004A50]'>
+                <div className='w-full bg-[#C4DACC] flex flex-col rounded-xl p-2 border border-[#004A50]'>
 
 
                     {/** CLOSET - Aura */}
@@ -133,7 +133,7 @@ const Item = () => {
                                 className='flex justify-between items-center w-full px-6 cursor-pointer'>
                                     <div className='flex mb-4'>
                                         <Image src={chat.img} />
-                                        <div className='flex flex-col justify-center ml-4 mb-2'>
+                                        <div className='flex flex-col text-sm justify-center ml-4 mb-2'>
                                             <p>{chat.name}</p>
                                             <p>{chat.xp}</p>
                                         </div>
@@ -157,7 +157,7 @@ const Item = () => {
                                 className='flex justify-between items-center w-full px-6 cursor-pointer'>
                                     <div className='flex mb-4'>
                                         <Image src={battery.img} />
-                                        <div className='flex flex-col justify-center ml-4 mb-2'>
+                                        <div className='flex flex-col text-sm justify-center ml-4 mb-2'>
                                             <p>{battery.name}</p>
                                             <p>{battery.xp}</p>
                                         </div>

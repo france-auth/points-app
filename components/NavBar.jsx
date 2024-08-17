@@ -24,12 +24,12 @@ const NavBar = ({ navLinks }) => {
 
     return (
         <div>
-            <ul className="flex px-2 py-3 mt-1 mb-3 list-none justify-center">
+            <ul className="xs:px-1 xx:px-2 xs:w-full flex px-2 py-3 mt-1 mb-3 list-none justify-center">
             {navLinks.map((nav) => (
                 <Link
                 key={nav.id}
                 href={nav.path}
-                className={`flex px-2 py-2 ${
+                className={`flex xs:px-1 xs:text-[15px] xx:text-base xx:px-2 px-2 py-2 ${
                     activePath === nav.path
                     ? "underline font-bold"
                     : ""

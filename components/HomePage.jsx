@@ -41,8 +41,8 @@ const HomePage = () => {
             <BatteryModal isOpen3={showModal3} isClosed3={closeModal3}/>
 
 
-            <div className="flex flex-col w-full p-6 border-b-[1px]">
-                <div className='flex justify-between w-full'>
+            <div className="flex xs:w-screen-minus-2rem xs:p-4 flex-col w-full p-6 border-b-[1px]">
+                <div className='flex justify-between w-full xs:mb-2'>
                         <h2 className="font-semibold text-right">AVERY</h2>
                     <div className='flex'>
                         <p>194, 200 P <span className='font-semibold'>GOLD</span></p>
@@ -52,29 +52,29 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex justify-between w-full'>
+                <div className='flex xr:flex-row xs:flex-col xr:items-center xs:items-start xr:justify-between w-full'>
                     <div className='flex'>
-                        <h2 className="flex font-normal text-right">LOVE
+                        <h2 className="flex font-normal">LOVE
                         </h2>
-                        <div className='flex items-center ml-2'>
+                        <div className='flex xr:justify-start items-center ml-2'>
                             {love.map((love) => (
                                 <Image key={love.id}
                                 src={love.img} 
-                                className='flex mx-1 items-center mt-1'/>
+                                className='flex ml-1 items-center mt-1'/>
                             ))}
                         </div> 
-                        <div className='flex ml-3 justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
+                        <div className='flex xs:justify-center ml-3 justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
                         onClick={openModal2}>
                             <p className='font-semibold bg-[#B9D2C3] text-center'>?</p>
                         </div>
                     </div>
 
-                    <div className=' flex w-[43%] justify-between'>
-                        <p>BATTERY</p>
+                    <div className='xs:w-full xs:justify-start xr:mt-0 xs:mt-2 flex xr:w-[43%] xr:justify-between'>
+                        <p className='flex xr:mr-1 xs:mr-2'>BATTERY</p>
                         <Image
                         src={batteryModal}
                         alt='battery bar'/>
-                        <div className='flex justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
+                        <div className='flex  xs:justify-center xr:ml-2 xs:ml-4 justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
                         onClick={openModal3}>
                             <p className='font-semibold bg-[#B9D2C3] text-center'>?</p>
                         </div>

@@ -9,7 +9,7 @@ const InviteModal = ({isOpen, isClosed}) => {
         <div
         className='fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
             <div
-            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-[23rem]'>
+            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4  w-[23rem]'>
                 <div className='flex'>
                     <Image 
                     src={backIcon}
@@ -24,11 +24,11 @@ const InviteModal = ({isOpen, isClosed}) => {
                     </p>
                 </div>
 
-                <ul className='px-2 list-disc'>
+                <ul className='px-2'>
                     {inviteRewards.map((reward) => (
                         <li
                         key={reward.id}
-                        className='my-3 flex justify-center'>
+                        className='xs:my-2 xr:text-[15px] xr:my-2 xs:text-[14px] flex justify-center'>
                             {reward.invite}
                         </li>
                     ))}

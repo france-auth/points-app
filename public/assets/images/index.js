@@ -9,6 +9,7 @@ import heartsModal from './heartsModal.svg'
 import questionMarkModal from './questionMarkModal.svg'
 import batteryBars from "./batteryBars.svg";
 import batteryModal from "./batteryModal.svg";
+import hashtags from "./hashtags.svg"
 
 export {
     miner,
@@ -21,5 +22,6 @@ export {
     heartsModal,
     questionMarkModal,
     batteryModal,
-    batteryBars
+    batteryBars,
+    hashtags
 }
