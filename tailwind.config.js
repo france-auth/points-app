@@ -26,5 +26,23 @@ module.exports = {
       },
     },
   },
+  theme: {
+    extend: {
+      keyframes: {
+        backgroundColorChange: {
+          '0%, 100%': { backgroundColor: '#C4DACC' }, // Start/End color
+          '50%': { backgroundColor: '#9CB2A4' },      // Midway color
+        },
+        svgFillChange: {
+          '0%, 100%': { fill: '#E2F8EA' },            // Start/End color
+          '50%': { fill: '#1F3527' },                 // Midway color
+        },
+      },
+      animation: {
+        bgChange: 'backgroundColorChange 3s ease-in-out infinite',
+        svgFill: 'svgFillChange 3s ease-in-out infinite',
+      },
+    },
+  },
   plugins: []
 };

@@ -10,7 +10,6 @@ import questionMarkModal from './questionMarkModal.svg'
 import batteryBars from "./batteryBars.svg";
 import batteryModal from "./batteryModal.svg";
 import hashtags from "./hashtags.svg"
-import loaderIcon from "./loaderIcon.svg"
 
 export {
     miner,
@@ -24,6 +23,5 @@ export {
     questionMarkModal,
     batteryModal,
     batteryBars,
-    hashtags,
-    loaderIcon
+    hashtags
 }
