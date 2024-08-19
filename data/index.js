@@ -382,7 +382,7 @@ export const batteryPotions = [
 export const love = [
     {
         id: 1,
-        img: fullHeart
+        img: emptyHeart
     },
     {
         id: 2,

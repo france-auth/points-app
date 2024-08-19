@@ -24,10 +24,6 @@ module.exports = {
         'xx': '350px', // Ensure the 'xs' breakpoint is still available
         'xr': '400px', // Ensure the 'xs' breakpoint is still available
       },
-    },
-  },
-  theme: {
-    extend: {
       keyframes: {
         backgroundColorChange: {
           '0%, 100%': { backgroundColor: '#C4DACC' }, // Start/End color

@@ -4,11 +4,23 @@ import {rankings, rankPageButtons } from '@/data';
 import { userIcon } from '@/public/assets/images';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const Ranking = () => {
 
+     // State to track the current page
+    const [currentPage, setCurrentPage] = useState(1);
+
+    // Handle page click
+    const handlePageClick = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    };
+
     const userName = "MY NAME";
-    const userRank = "180,203,223";
+    const userTier = "SILVER";
+    const userRank = "#243";
+    const userXp = "180,203,223";
+    const userPoints = "180,203,223";
 
 
     return (
@@ -19,7 +31,7 @@ const Ranking = () => {
 
                         {/** USER NAME AND RANK CARD */}
                         <div
-                        className='flex w-[23.5rem] border text-sm border-[#004A50] px-5 py-5 rounded-xl justify-between bg-[#D8EEE0] mb-3'>
+                        className='xr:flex w-full xs:flex xs:flex-wrap border text-sm border-[#004A50] px-5 py-5 rounded-xl justify-between bg-[#D8EEE0] mb-3'>
                             <div className='flex items-center'>
                                 <Image
                                 src={userIcon}
@@ -28,12 +40,16 @@ const Ranking = () => {
                                 <p
                                 className='flex justify-center items-center'>{`${userName}`}</p>
                             </div>
-                            <p className='flex items-center'>{`${userRank}`}</p>
+                            <div className='flex items center justify-center'>
+                                <p className='flex items-center font-bold'>{`${userTier}`} <span className='ml-2 font-normal'>{userRank}</span></p>
+                            </div>
+                            <p className='flex xs:mt-2 xr:mt-0 items-center'>{`${userPoints}`}</p>
                         </div>
                     </div>
+
                     {/** TOP MINERS CARD */}
                     <div className='flex justify-center items-center'>
-                    <div className='flex justify-between p-3 w-[23.5rem] rounded-xl border border-[#004A50] bg-[#C4DACC]'>
+                    <div className='flex justify-between p-4 w-full rounded-xl border border-[#004A50] bg-[#C4DACC]'>
                         <p>TOP 100 MINERS</p>
 
                         <select
@@ -55,7 +71,7 @@ const Ranking = () => {
 
                     {/** RANKINGS */}
                     <div className='flex w-full justify-center'>
-                        <div className='flex flex-col mt-3 w-[23.5rem] items-center'>
+                        <div className='flex flex-col mt-3 w-full items-center'>
                             {rankings.map((ranking, index) => (
                                 <div key={ranking.id}
                                 className={`flex w-full border text-sm border-[#004A50] px-5 py-5 cursor-pointer justify-between bg-[#C4DACC]
@@ -84,20 +100,15 @@ const Ranking = () => {
                     <div className='flex justify-center items-center mt-4 mb-2'>
                         <ul
                         className='flex justify-evenly items-center w-[20rem]'>
-                            {rankPageButtons.map((rankPage, id) => (
+                            {rankPageButtons.map((rankPage) => (
                                 <li
                                 key={rankPage.page}
-                                className={`flex p-3 rounded-full w-10 h-10 overflow-hidden justify-center items-center
-                                ${id === rankPageButtons[0].page - 1
-                                    ? "bg-[#004A50]"
-                                    : "bg-[#C4DACC]" }`
-                                }>
-                                    <p
-                                    className={`${id === rankPageButtons[0].page - 1
-                                    ? "text-[#C4DACC]"
-                                    : "text-[#004A50]" }`
-                                    }>
-                                        {rankPage.page}</p>
+                                className={`flex p-3 rounded-full w-10 h-10 overflow-hidden justify-center items-center cursor-pointer
+                                    ${currentPage === rankPage.page ? "bg-[#E2F8EA] border border-[#004A50]" : "bg-[#B8D2C3]"}`}
+                                    onClick={() => handlePageClick(rankPage.page)}>
+                                    <p>
+                                        {rankPage.page}
+                                    </p>
                                 </li>
                         ))}</ul>
                     </div>
