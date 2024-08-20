@@ -1,7 +1,7 @@
 import {miner,
     userIcon,
     rectangle,
-    emptyHeart, fullHeart} from '@/public/assets/images/index'
+    emptyHeart, inviteIcon} from '@/public/assets/images/index'
 
 export const hashs = [
     {
@@ -101,7 +101,7 @@ export const missions = [
 export const invites = [
     {
         id: 1,
-        icon: userIcon,
+        icon: inviteIcon,
         name: "Name",
         points: "624,000P",
         rank: "PLATINUM",
@@ -109,7 +109,7 @@ export const invites = [
     },
     {
         id: 2,
-        icon: userIcon,
+        icon: inviteIcon,
         name: "Name",
         points: "624,000P",
         rank: "PLATINUM",
@@ -117,7 +117,7 @@ export const invites = [
     },
     {
         id: 3,
-        icon: userIcon,
+        icon: inviteIcon,
         name: "Name",
         points: "624,000P",
         rank: "PLATINUM",
@@ -125,7 +125,7 @@ export const invites = [
     },
     {
         id: 4,
-        icon: userIcon,
+        icon: inviteIcon,
         name: "Name",
         points: "624,000P",
         rank: "PLATINUM",
@@ -133,7 +133,7 @@ export const invites = [
     },
     {
         id: 5,
-        icon: userIcon,
+        icon: inviteIcon,
         name: "Name",
         points: "624,000P",
         rank: "PLATINUM",

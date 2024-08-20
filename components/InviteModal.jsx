@@ -3,13 +3,13 @@ import { backIcon } from '@/public/assets/images'
 import Image from 'next/image'
 import { inviteRewards } from '@/data'
 
-const InviteModal = ({isOpen, isClosed}) => {
+const InviteModal = ({isOpen, isClosed, referralCode, onCopy, copied}) => {
     
     return (!isOpen ? null : (
         <div
-        className='fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
+        className='fixed inset-0 xs:p-3 xr:p-8 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
             <div
-            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4  w-[23rem]'>
+            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4  w-full'>
                 <div className='flex'>
                     <Image 
                     src={backIcon}
@@ -24,21 +24,32 @@ const InviteModal = ({isOpen, isClosed}) => {
                     </p>
                 </div>
 
-                <ul className='px-2'>
+                <ul className='px-2 list-disc space-y-2'>
                     {inviteRewards.map((reward) => (
                         <li
                         key={reward.id}
-                        className='xs:my-3 xr:text-[15px] xr:my-2 xs:text-[14px] flex justify-center'>
+                        className='list-disc xs:my-2 xr:text-[15px] xr:my-2 xs:text-[14px] flex justify-center'>
                             {reward.invite}
                         </li>
                     ))}
                 </ul>
 
-                    {/** COPY INVITE LINK BUTTON */}
-                <button type="button"
-                    className='text-[#FFFFFF] w-full hover:bg-[#02363b] bg-[#004A50] rounded-2xl px-5 py-3 mt-4 cursor-pointer'
-                    >COPY INVITE CODE
-                </button>
+                    {/** COPY INVITE LINK BUTTON 367378 */}
+                {!copied ? (
+                    <button 
+                    type="button"
+                    onClick={onCopy}
+                    className='text-[#FFFFFF] w-full hover:bg-[#02363b] bg-[#004A50] rounded-2xl px-5 py-3 mt-4 cursor-pointer transition'
+                        >COPY INVITE CODE
+                    </button>
+                ) : (
+                    <button 
+                    type="button"
+                    onClick={onCopy}
+                    className='text-[#FFFFFF] w-full hover:bg-[#367378] bg-[#367378] rounded-2xl px-5 py-3 mt-4 cursor-pointer'
+                        >COPIED: {referralCode}
+                    </button>
+                )}
             </div>
         </div>
     ))

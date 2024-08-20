@@ -13,6 +13,7 @@ import hashtags from "./hashtags.svg"
 import fullBattery from "./fullBattery.svg"
 import emptyBattery from "./emptyBattery.svg"
 import halfBattery from "./halfBattery.svg"
+import inviteIcon from "./inviteIcon.svg"
 
 export {
     miner,
@@ -29,5 +30,6 @@ export {
     hashtags,
     fullBattery,
     emptyBattery,
-    halfBattery
+    halfBattery,
+    inviteIcon
 }
