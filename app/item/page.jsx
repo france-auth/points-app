@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { aura, background, accessories, tapBoosts, chatPotions, batteryPotions } from '@/data';
-import NavBar from '@/components/NavBar';
 import PurchaseModal from '@/components/PurchaseModal';
 import Image from 'next/image';
 import Layout from '@/components/Layout';

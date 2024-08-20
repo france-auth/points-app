@@ -9,12 +9,15 @@ import heartsModal from './heartsModal.svg'
 import questionMarkModal from './questionMarkModal.svg'
 import batteryBars from "./batteryBars.svg";
 import batteryModal from "./batteryModal.svg";
-import hashtags from "./hashtags.svg"
-import fullBattery from "./fullBattery.svg"
-import emptyBattery from "./emptyBattery.svg"
-import halfBattery from "./halfBattery.svg"
-import inviteIcon from "./inviteIcon.svg"
-import questIcon from "./questIcon.svg"
+import hashtags from "./hashtags.svg";
+import fullBattery from "./fullBattery.svg";
+import emptyBattery from "./emptyBattery.svg";
+import halfBattery from "./halfBattery.svg";
+import inviteIcon from "./inviteIcon.svg";
+import questIcon from "./questIcon.svg";
+import claimFace from "./claimFace.svg";
+import claimedFace from "./claimedFace.svg";
+import claimableFace from "./claimableFace.svg";
 
 export {
     miner,
@@ -33,5 +36,8 @@ export {
     emptyBattery,
     halfBattery,
     inviteIcon,
-    questIcon
+    questIcon,
+    claimFace,
+    claimedFace,
+    claimableFace
 }

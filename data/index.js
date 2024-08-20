@@ -58,22 +58,34 @@ export const quests = [
         id: 1,
         icon: questIcon,
         task: "Daily Check in",
+        taskDetails: "Log in once daily. Daily missions reset at 00:00 UTC.",
         xp: "+100P",
-        arrow: ">"
+        arrow: ">",
+        lastClaimed: null,
+        isClaimable: null,
+        isClaimed: null
     },
     {
         id: 2,
         icon: questIcon,
         task: "Chat with soul",
+        taskDetails: "Talk with your Soul once a day. Daily missions reset at 00:00 UTC.",
         xp: "+100P",
-        arrow: ">"
+        arrow: ">",
+        lastClaimed: null,
+        isClaimable: null,
+        isClaimed: null
     },
     {
         id: 3,
         icon: questIcon,
         task: "Tap your Soul",
+        taskDetails: "Tap at least 10 times a day. Daily missions reset at 00:00 UTC.",
         xp: "+100P",
-        arrow: ">"
+        arrow: ">",
+        lastClaimed: null,
+        isClaimable: null,
+        isClaimed: null
     },
 ];
 
@@ -82,29 +94,45 @@ export const missions = [
         id: 1,
         icon: questIcon,
         task: "Follow X",
+        taskDetails: "Log in once daily. Daily missions reset at 00:00 UTC.",
         xp: "+100P",
-        arrow: ">"
+        arrow: ">",
+        lastClaimed: null,
+        isClaimable: null,
+        isClaimed: null
     },
     {
         id: 2,
         icon: questIcon,
         task: "Join Discord",
+        taskDetails: "",
         xp: "+100P",
-        arrow: ">"
+        arrow: ">",
+        lastClaimed: null,
+        isClaimable: null,
+        isClaimed: null
     },
     {
         id: 3,
         icon: questIcon,
         task: "Generate Alterim AI",
+        taskDetails: "",
         xp: "+100P",
-        arrow: ">"
+        arrow: ">",
+        lastClaimed: null,
+        isClaimable: null,
+        isClaimed: null
     },
     {
         id: 4,
         icon: questIcon,
         task: "RT and Like our X POST!",
+        taskDetails: "",
         xp: "+100P",
-        arrow: ">"
+        arrow: ">",
+        lastClaimed: null,
+        isClaimable: null,
+        isClaimed: null
     },
 ];
 
@@ -185,7 +213,7 @@ export const inviteRewards = [
 export const rankings = [
     {
         id: 1,
-        icon: questIcon,
+        icon: userIcon,
         name: "Name",
         rank: "180,203,223",
     },
