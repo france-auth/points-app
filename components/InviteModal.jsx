@@ -39,14 +39,14 @@ const InviteModal = ({isOpen, isClosed, referralCode, onCopy, copied}) => {
                     <button 
                     type="button"
                     onClick={onCopy}
-                    className='text-[#FFFFFF] w-full hover:bg-[#02363b] bg-[#004A50] rounded-2xl px-5 py-3 mt-4 cursor-pointer transition'
+                    className='text-[#FFFFFF] w-full bg-[#004A50] rounded-2xl px-5 py-3 mt-4 cursor-pointer transition'
                         >COPY INVITE CODE
                     </button>
                 ) : (
                     <button 
                     type="button"
                     onClick={onCopy}
-                    className='text-[#FFFFFF] w-full hover:bg-[#367378] bg-[#367378] rounded-2xl px-5 py-3 mt-4 cursor-pointer'
+                    className='text-[#FFFFFF] w-full bg-[#367378] rounded-2xl px-5 py-3 mt-4 cursor-pointer'
                         >COPIED: {referralCode}
                     </button>
                 )}

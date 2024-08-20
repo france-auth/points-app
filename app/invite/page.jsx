@@ -50,7 +50,7 @@ const Invite = () => {
     
                         {/* SHARE BUTTON */}
                         <button type="button"
-                        className='text-[#FFFFFF] w-full hover:bg-[#02363b] bg-[#004A50] rounded-2xl px-5 py-3 my-3 cursor-pointer'
+                        className='text-[#FFFFFF] w-full bg-[#004A50] rounded-2xl px-5 py-3 my-3 cursor-pointer'
                         onClick={openModal}
                         >SHARE CODE TO FRENS</button>
                     </div>
@@ -72,7 +72,7 @@ const Invite = () => {
         
                             {/* SHARE BUTTON */}
                             <button type="button"
-                            className='text-[#FFFFFF] w-full hover:bg-[#02363b] bg-[#004A50] rounded-2xl px-5 py-3 mt-5 mb-4 cursor-pointer'
+                            className='text-[#FFFFFF] w-full bg-[#004A50] rounded-2xl px-5 py-3 mt-5 mb-4 cursor-pointer'
                             onClick={openModal}
                             >SHARE CODE TO FRENS</button>
                             

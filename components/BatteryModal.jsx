@@ -7,9 +7,9 @@ const BatteryModal = ({isOpen3, isClosed3}) => {
     
     return (!isOpen3 ? null : (
         <div
-        className='fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
+        className='fixed inset-0 xs:p-3 xr:p-7 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
             <div
-            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-[23rem]'>
+            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-full'>
                 <div className='flex'>
                     <Image 
                     src={backIcon}

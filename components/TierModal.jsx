@@ -6,9 +6,9 @@ const TierModal = ({isOpen, isClosed}) => {
     
     return (!isOpen ? null : (
         <div
-        className='fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
+        className='fixed xs:p-3 xr:p-7 inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
             <div
-            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-[23rem]'>
+            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-full'>
                 <div className='flex'>
                     <Image 
                     src={backIcon}
@@ -40,7 +40,7 @@ const TierModal = ({isOpen, isClosed}) => {
                         </ul>
 
                         <p className='my-3'>Tier Breakdown:</p>
-                        <ul className='px-3 list-disc my-3'>
+                        <ul className='px-3 list-disc mb-3'>
                             <li>Bronze: 100-70% of participants</li>
                             <li>Silver: 70-40%</li>
                             <li>Gold: 40-25%</li>
