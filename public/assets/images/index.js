@@ -14,6 +14,7 @@ import fullBattery from "./fullBattery.svg"
 import emptyBattery from "./emptyBattery.svg"
 import halfBattery from "./halfBattery.svg"
 import inviteIcon from "./inviteIcon.svg"
+import questIcon from "./questIcon.svg"
 
 export {
     miner,
@@ -31,5 +32,6 @@ export {
     fullBattery,
     emptyBattery,
     halfBattery,
-    inviteIcon
+    inviteIcon,
+    questIcon
 }

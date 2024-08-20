@@ -13,7 +13,7 @@ const Invite = () => {
     const [copied, setCopied] = useState(false);
 
     // To keep track if the user has no referrals or at least one referral
-    const hasReferrals = invites.length < 0;
+    const hasReferrals = invites.length > 0;
 
     const x = invites.length; // Number of referrals
     const referralCode = 'XMDNAS'; // Replace with dynamic code later

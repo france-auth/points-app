@@ -1,7 +1,10 @@
-import {miner,
+import {
+    miner,
     userIcon,
     rectangle,
-    emptyHeart, inviteIcon} from '@/public/assets/images/index'
+    emptyHeart,
+    inviteIcon,
+    questIcon} from '@/public/assets/images/index'
 
 export const hashs = [
     {
@@ -53,48 +56,55 @@ export const navLinks = [
 export const quests = [
     {
         id: 1,
-        icon: userIcon,
+        icon: questIcon,
         task: "Daily Check in",
         xp: "+100P",
+        arrow: ">"
     },
     {
         id: 2,
-        icon: userIcon,
+        icon: questIcon,
         task: "Chat with soul",
         xp: "+100P",
+        arrow: ">"
     },
     {
         id: 3,
-        icon: userIcon,
-        task: "Daily Check in",
+        icon: questIcon,
+        task: "Tap your Soul",
         xp: "+100P",
+        arrow: ">"
     },
 ];
 
 export const missions = [
     {
         id: 1,
-        icon: userIcon,
+        icon: questIcon,
         task: "Follow X",
         xp: "+100P",
+        arrow: ">"
     },
     {
         id: 2,
-        icon: userIcon,
+        icon: questIcon,
         task: "Join Discord",
         xp: "+100P",
+        arrow: ">"
     },
     {
         id: 3,
-        icon: userIcon,
+        icon: questIcon,
         task: "Generate Alterim AI",
         xp: "+100P",
+        arrow: ">"
     },
     {
         id: 4,
-        icon: userIcon,
+        icon: questIcon,
         task: "RT and Like our X POST!",
         xp: "+100P",
+        arrow: ">"
     },
 ];
 
@@ -175,7 +185,7 @@ export const inviteRewards = [
 export const rankings = [
     {
         id: 1,
-        icon: userIcon,
+        icon: questIcon,
         name: "Name",
         rank: "180,203,223",
     },
