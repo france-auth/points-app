@@ -34,7 +34,7 @@ const TierModal = ({isOpen, isClosed}) => {
                     <Image 
                     src={backIcon}
                     alt='back arrow'
-                    width={40}
+                    width={42} height={42}
                     className='flex cursor-pointer'
                     onClick={handleClose}/>
                 </div>

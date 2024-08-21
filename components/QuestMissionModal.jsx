@@ -44,7 +44,7 @@ const QuestMissionModal = ({ item, onClose, onClaim }) => {
                         <Image 
                         src={backIcon}
                         alt='back arrow'
-                        width={50}
+                        width={42} height={42}
                         className='flex cursor-pointer'
                         onClick={handleClose}/>
 

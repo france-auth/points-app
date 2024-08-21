@@ -32,8 +32,8 @@ const BatteryModal = ({isOpen3, isClosed3}) => {
                 <div className='flex'>
                     <Image 
                     src={backIcon}
+                    width={42} height={42}
                     alt='back arrow'
-                    width={40}
                     className='flex cursor-pointer'
                     onClick={handleClose}/>
                 </div>
@@ -44,6 +44,7 @@ const BatteryModal = ({isOpen3, isClosed3}) => {
                         BATTERY
                     </p>
                     <Image src={batteryModal} 
+                    alt='battery img'
                     className='mr-3'/>
                 </div>
 

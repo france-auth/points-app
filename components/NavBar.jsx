@@ -22,7 +22,7 @@ const NavBar = ({ navLinks }) => {
 
     return (
         <div>
-            <ul className="xs:px-1 xx:px-2 xs:w-full flex px-2 py-3 mt-1 mb-3 list-none justify-center">
+            <ul className="xs:px-1 bg-[#C4DACC] xx:px-2 xs:w-full flex px-2 py-3 mt-1 mb-3 list-none justify-center">
             {navLinks.map((nav) => (
                 <Link
                 key={nav.id}

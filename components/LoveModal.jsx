@@ -31,8 +31,8 @@ const TierModal = ({isOpen2, isClosed2}) => {
                 <div className='flex'>
                     <Image 
                     src={backIcon}
+                    width={42} height={42}
                     alt='back arrow'
-                    width={40}
                     className='flex cursor-pointer'
                     onClick={handleClose}/>
                 </div>
@@ -43,6 +43,7 @@ const TierModal = ({isOpen2, isClosed2}) => {
                         LOVE
                     </p>
                     <Image src={heartsModal} 
+                    alt='heart modal img'
                     className='mr-3'/>
                 </div>
 

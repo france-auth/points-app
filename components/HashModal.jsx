@@ -34,8 +34,8 @@ const HashModal = ({isOpen, isClosed}) => {
                 <div className='flex'>
                     <Image 
                     src={backIcon}
+                    width={42} height={42}
                     alt='back arrow'
-                    width={40}
                     className='flex cursor-pointer'
                     onClick={handleClose}/>
                 </div>

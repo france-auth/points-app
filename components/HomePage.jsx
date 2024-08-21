@@ -73,6 +73,7 @@ const HomePage = () => {
                         <div className='flex xr:justify-start items-center ml-2'>
                             {love.map((love, index) => (
                                 <Image key={index}
+                                alt='heart img'
                                 src={index < filledHearts ? fullHeart : emptyHeart} 
                                 className='flex ml-1 items-center mt-1'/>
                             ))}

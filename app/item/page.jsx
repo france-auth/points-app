@@ -42,7 +42,7 @@ const Item = () => {
                                 <div key={index}
                                 className='flex flex-col justify-center items-center cursor-pointer'
                                 onClick={() => openModal(bg)}>
-                                    <Image src={bg.img} />
+                                    <Image src={bg.img} alt='background img' />
                                     <p>{bg.name}</p>
                                     <p>{bg.price}</p>
                                 </div>
@@ -63,7 +63,7 @@ const Item = () => {
                                 <div key={index}
                                 className='flex flex-col justify-center items-center cursor-pointer'
                                 onClick={() => openModal(hg)}>
-                                    <Image src={hg.img} />
+                                    <Image src={hg.img} alt='headgear ing' />
                                     <div className='flex-col justify-center items-center'>
                                         <p>{hg.name}</p>
                                         <p>{hg.price}</p>
@@ -87,7 +87,7 @@ const Item = () => {
                                 className='flex flex-col justify-center items-center cursor-pointer'
                                 onClick={() => openModal(fw)}
                                 >
-                                    <Image src={fw.img} />
+                                    <Image src={fw.img} alt='facewear img' />
                                     <p>{fw.name}</p>
                                     <p>{fw.price}</p>
                                 </div>
@@ -115,7 +115,7 @@ const Item = () => {
                                 onClick={() => openModal(crp)}
                                 >
                                     <div className='flex mb-4'>
-                                        <Image src={crp.img} />
+                                        <Image src={crp.img} alt='chat recharge potion'/>
                                         <div className='flex flex-col justify-center ml-4 mb-2'>
                                             <p>{crp.name}</p>
                                             <p>{crp.price}</p>
@@ -141,7 +141,7 @@ const Item = () => {
                                 onClick={() => openModal(tap)}
                                 >
                                     <div className='flex mb-4'>
-                                        <Image src={tap.img} />
+                                        <Image src={tap.img} alt='tap boost img' />
                                         <div className='flex flex-col text-sm justify-center ml-4 mb-2'>
                                             <p>{tap.name}</p>
                                             <p>{tap.price}</p>
