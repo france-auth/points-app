@@ -7,44 +7,37 @@ import Layout from '@/components/Layout';
 import QuestMissionModal from '@/components/QuestMissionModal';
 
 const Quest = () => {
-
     const [quests, setQuests] = useState(questsData);
     const [missions, setMissions] = useState(missionsData);
     const [selectedQuest, setSelectedQuest] = useState(null);
     const [selectedMission, setSelectedMission] = useState(null);
     const [missionInProgress, setMissionInProgress] = useState(null);
 
-    // Update quest claimable status based on time elapsed
-    useEffect(() => {
-        const updatedQuests = quests.map((quest) => {
-            const now = new Date();
-            const lastClaimedTime = new Date(quest.lastClaimed);
-            const diffHours = Math.abs(now - lastClaimedTime) / 36e5;
+    // Placeholder function for backend logic
+    const checkIfQuestIsClaimable = (quest) => {
+        // This is where the backend logic will be integrated to check if the quest is claimable
+        return quest.isClaimable;
+    };
 
-            // If the quest was claimed more than 24 hours ago, mark it as claimable
-            if (quest.lastClaimed && diffHours >= 24) {
-                return { ...quest, isClaimable: true };
-            }
-            return quest;
-        });
+    // Update quest claimable status using the placeholder function
+    useEffect(() => {
+        const updatedQuests = quests.map((quest) => ({
+            ...quest,
+            isClaimable: checkIfQuestIsClaimable(quest),
+        }));
         setQuests(updatedQuests);
-    }, [quests]);
+    }, []); // Empty dependency array ensures this runs only once on mount
 
     // Handle mission click and redirect
     const handleMissionClick = (mission) => {
-        setMissionInProgress(mission.id);
-        window.open(mission.url, '_blank');
-
-        // Set the button to be claimable after 3 seconds
-        setTimeout(() => {
-            setMissions((prevMissions) =>
-                prevMissions.map((m) =>
-                    m.id === mission.id ? { ...m, isClaimable: true } : m
-                )
-            );
+        if (mission.isClaimable) {
+            // If the mission is already claimable, open the modal instead of redirecting
             setSelectedMission(mission);
-            setMissionInProgress(null);
-        }, 3000);
+        } else {
+            setMissionInProgress(mission.id);
+            window.open(mission.url, '_blank');
+            setSelectedMission(null); // Close the modal after redirect
+        }
     };
 
     // Monitor the visibility of the page to set claimable status when the user returns
@@ -56,10 +49,7 @@ const Quest = () => {
                         m.id === missionInProgress ? { ...m, isClaimable: true } : m
                     )
                 );
-                setSelectedMission(
-                    missions.find((mission) => mission.id === missionInProgress)
-                );
-                setMissionInProgress(null);
+                setMissionInProgress(null); // Clear the in-progress mission
             }
         };
 
@@ -82,7 +72,9 @@ const Quest = () => {
         if (selectedQuest) {
             setQuests((prevQuests) =>
                 prevQuests.map((quest) =>
-                    quest.id === selectedQuest.id ? { ...quest, isClaimed: true, isClaimable: false } : quest
+                    quest.id === selectedQuest.id
+                        ? { ...quest, isClaimed: true, isClaimable: false }
+                        : quest
                 )
             );
             setSelectedQuest({ ...selectedQuest, isClaimed: true });
@@ -90,7 +82,9 @@ const Quest = () => {
         if (selectedMission) {
             setMissions((prevMissions) =>
                 prevMissions.map((mission) =>
-                    mission.id === selectedMission.id ? { ...mission, isClaimed: true, isClaimable: false } : mission
+                    mission.id === selectedMission.id
+                        ? { ...mission, isClaimed: true, isClaimable: false }
+                        : mission
                 )
             );
             setSelectedMission({ ...selectedMission, isClaimed: true });
@@ -99,75 +93,68 @@ const Quest = () => {
 
     return (
         <Layout>
-            <div className='flex flex-col items-center p-4 min-h-screen max-w-full bg-[#9CB2A4]'>
-                <h1 className='font-bold mt-4'>DAILY CHECK IN</h1>
+            <div className="flex flex-col items-center p-4 min-h-screen max-w-full bg-[#9CB2A4]">
+                <h1 className="font-bold mt-4">DAILY CHECK IN</h1>
                 <p>Get your daily points</p>
 
                 {/** QUEST CARDS */}
-                <div className='flex flex-col mt-5 w-full items-center'>
+                <div className="flex flex-col mt-5 w-full items-center">
                     {quests.map((quest) => (
-                        <div 
-                        key={quest.id}
-                        onClick={() => handleQuestClick(quest)}
-                        className={`flex w-full text-sm justify-between mb-1 border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer
-                        ${quest.isClaimed ? 'bg-[#B8D2C3]' : 'bg-[#C4DACC]'}`}>
-                            <div className='flex justify-evenly'>
-                                <Image 
-                                src={quest.icon}
-                                alt='user icon'
-                                className='mr-3'
-                                />
-                                <div className='flex-col justify-center'>
+                        <div
+                            key={quest.id}
+                            onClick={() => handleQuestClick(quest)}
+                            className={`flex w-full text-sm justify-between mb-1 border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer
+                            ${quest.isClaimed ? 'bg-[#B8D2C3]' : 'bg-[#C4DACC]'}`}
+                        >
+                            <div className="flex justify-evenly">
+                                <Image src={quest.icon} alt="user icon" className="mr-3" />
+                                <div className="flex-col justify-center">
                                     <p>{quest.task}</p>
-                                    <p 
-                                    className='text-xs'>
-                                        {quest.xp} 
+                                    <p className="text-xs">
+                                        {quest.xp}
                                         {quest.isClaimed ? (
-                                            <span className='font-semibold ml-2'>✓ Claimed</span>
+                                            <span className="font-semibold ml-2">✓ Claimed</span>
                                         ) : (
-                                            quest.isClaimable && <span className='font-semibold ml-2'>Claimable</span>
+                                            quest.isClaimable && (
+                                                <span className="font-semibold ml-2">Claimable</span>
+                                            )
                                         )}
                                     </p>
                                 </div>
                             </div>
-                            <div 
-                            className='flex items-center'>{quest.arrow}
-                            </div>
+                            <div className="flex items-center">{quest.arrow}</div>
                         </div>
                     ))}
                 </div>
 
-                <h1 className='font-bold mt-14'>MISSION</h1>
+                <h1 className="font-bold mt-14">MISSION</h1>
                 <p>LEVEL-UP with your soul</p>
 
-                <div className='flex flex-col mt-5 mb-1 w-full items-center'>
+                <div className="flex flex-col mt-5 mb-1 w-full items-center">
                     {missions.map((mission) => (
-                        <div key={mission.id}
-                        onClick={() => handleMissionClick(mission)}
+                        <div
+                            key={mission.id}
+                            onClick={() => handleMissionClick(mission)}
                             className={`flex w-full text-sm justify-between mb-1 border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer
-                            ${mission.isClaimed ? 'bg-[#B8D2C3]' : 'bg-[#C4DACC]'}`}>
-                            <div className='flex justify-evenly'>
-                                <Image 
-                                    src={mission.icon}
-                                    alt='user icon'
-                                    className='mr-3'
-                                />
-                                <div className='flex-col justify-center'>
+                            ${mission.isClaimed ? 'bg-[#B8D2C3]' : 'bg-[#C4DACC]'}`}
+                        >
+                            <div className="flex justify-evenly">
+                                <Image src={mission.icon} alt="user icon" className="mr-3" />
+                                <div className="flex-col justify-center">
                                     <p>{mission.task}</p>
-                                    <p 
-                                    className='text-xs'>
-                                        {mission.xp} 
+                                    <p className="text-xs">
+                                        {mission.xp}
                                         {mission.isClaimed ? (
-                                            <span className='font-semibold ml-2'>✓ Claimed</span>
+                                            <span className="font-semibold ml-2">✓ Claimed</span>
                                         ) : (
-                                            mission.isClaimable && <span className='font-semibold ml-2'>Claimable</span>
+                                            mission.isClaimable && (
+                                                <span className="font-semibold ml-2">Claimable</span>
+                                            )
                                         )}
                                     </p>
                                 </div>
                             </div>
-                            <div 
-                            className='flex items-center'>{mission.arrow}
-                            </div>
+                            <div className="flex items-center">{mission.arrow}</div>
                         </div>
                     ))}
                 </div>
@@ -175,21 +162,21 @@ const Quest = () => {
 
             {selectedQuest && (
                 <QuestMissionModal
-                item={selectedQuest}
-                onClose={handleCloseModal}
-                onClaim={handleClaim}
+                    item={selectedQuest}
+                    onClose={handleCloseModal}
+                    onClaim={handleClaim}
                 />
             )}
 
             {selectedMission && (
                 <QuestMissionModal
-                item={selectedMission}
-                onClose={handleCloseModal}
-                onClaim={handleClaim}
+                    item={selectedMission}
+                    onClose={handleCloseModal}
+                    onClaim={handleClaim}
                 />
             )}
         </Layout>
-    )
-}
+    );
+};
 
 export default Quest;

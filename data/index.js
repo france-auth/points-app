@@ -81,7 +81,7 @@ export const navLinks = [
         title: 'INVITE',
         path: "/invite"
     },
-]
+];
 
 export const quests = [
     {
