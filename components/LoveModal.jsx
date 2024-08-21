@@ -1,22 +1,40 @@
-import React from 'react'
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { backIcon } from '@/public/assets/images'
 import Image from 'next/image'
 import { heartsModal } from '@/public/assets/images'
 
 const TierModal = ({isOpen2, isClosed2}) => {
+    const [isClosing, setIsClosing] = useState(false);
+
+    useEffect(() => {
+        if (!isOpen2) {
+            setIsClosing(false);
+        }
+    }, [isOpen2]);
+
+  // Handle close with animation
+    const handleClose = () => {
+        setIsClosing(true); // Trigger the closing animation
+        setTimeout(() => {
+        isClosed2(); // Call the parent close function after the animation is done
+        setIsClosing(false);
+        }, 300); // Match the timeout with the animation duration (0.3s or 300ms)
+    };
     
     return (!isOpen2 ? null : (
         <div
         className='fixed inset-0 xs:p-4 xr:p-7 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
             <div
-            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-full'>
+            className={`flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-full
+            ${isClosing ? 'modal-animate-out' : 'modal-animate-in'}`}>
                 <div className='flex'>
                     <Image 
                     src={backIcon}
                     alt='back arrow'
                     width={40}
                     className='flex cursor-pointer'
-                    onClick={isClosed2}/>
+                    onClick={handleClose}/>
                 </div>
 
                 <div className='flex justify-between mt-3 mb-1 items-center'>

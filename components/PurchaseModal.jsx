@@ -1,21 +1,41 @@
-import React from 'react'
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { backIcon} from '@/public/assets/images'
 import Image from 'next/image'
 
 const PurchaseModal = ({show, close, item}) => {
     
+    const [isClosing, setIsClosing] = useState(false);
+
+    useEffect(() => {
+        if (!item) {
+            setIsClosing(false);
+        }
+    }, [item]);
+
+  // Handle close with animation
+    const handleClose = () => {
+        setIsClosing(true); // Trigger the closing animation
+        setTimeout(() => {
+        close(); // Call the parent close function after the animation is done
+        setIsClosing(false);
+        }, 300); // Match the timeout with the animation duration (0.3s or 300ms)
+    };
+    
     return (!show ? null : (
         <div
-        className='fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
+        className={`fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]
+        `}>
             <div
-            className='flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-[23rem]'>
+            className={`flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-[23rem]
+            ${isClosing ? 'modal-animate-out' : 'modal-animate-in'}`}>
                 <div className='flex flex-col'>
                     <Image 
                     src={backIcon}
                     alt='back arrow'
                     width={50}
                     className='flex cursor-pointer'
-                    onClick={close}/>
+                    onClick={handleClose}/>
 
                     <Image 
                     src={item.modalImg}
