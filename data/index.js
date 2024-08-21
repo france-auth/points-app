@@ -4,7 +4,7 @@ import {
     rectangle,
     emptyHeart,
     inviteIcon,
-    questIcon} from '@/public/assets/images/index'
+    questIcon, purpleBg, blueBg, greenBg, yellowBg, musicHg, birdHg, milliHg, sleepyHg, glassesFw, blushFw, blackFw, lv100} from '@/public/assets/images/index'
 
 export const hashs = [
     {
@@ -94,45 +94,49 @@ export const missions = [
         id: 1,
         icon: questIcon,
         task: "Follow X",
-        taskDetails: "Log in once daily. Daily missions reset at 00:00 UTC.",
+        taskDetails: "Follow @Alterim.ai on X (link)",
         xp: "+100P",
         arrow: ">",
         lastClaimed: null,
         isClaimable: null,
-        isClaimed: null
+        isClaimed: null,
+        url: "https://www.twitter.com"
     },
     {
         id: 2,
         icon: questIcon,
         task: "Join Discord",
-        taskDetails: "",
+        taskDetails: "Join our Discord channel",
         xp: "+100P",
         arrow: ">",
         lastClaimed: null,
         isClaimable: null,
-        isClaimed: null
+        isClaimed: null,
+        url: "https://www.discord.com"
     },
     {
         id: 3,
         icon: questIcon,
         task: "Generate Alterim AI",
-        taskDetails: "",
-        xp: "+100P",
+        taskDetails: "Visit alterim.ai, generate a Soul for your NFT, then share it on X",
+        xp: "+500P",
         arrow: ">",
         lastClaimed: null,
         isClaimable: null,
-        isClaimed: null
+        isClaimed: null,
+        url: "https://www.x.com"
     },
     {
         id: 4,
         icon: questIcon,
         task: "RT and Like our X POST!",
-        taskDetails: "",
-        xp: "+100P",
+        taskDetails: "Retweet and Like our X post",
+        xp: "+200P",
         arrow: ">",
         lastClaimed: null,
         isClaimable: null,
-        isClaimed: null
+        isClaimed: null,
+        url: "https://www.x.com"
     },
 ];
 
@@ -273,83 +277,83 @@ export const rankings = [
     },
 ];
 
-export const aura = [
+export const backgrounds = [
     {
         id: 1,
-        aura: rectangle,
-        name: "aura1",
+        img: purpleBg,
+        name: "Purple",
         price: "100P",
     },
     {
         id: 2,
-        aura: rectangle,
-        name: "aura2",
+        img: blueBg,
+        name: "Blue",
         price: "500P",
     },
     {
         id: 3,
-        aura: rectangle,
-        name: "aura3",
+        img: greenBg,
+        name: "Green",
         price: "1,000P",
     },
     {
         id: 4,
-        aura: rectangle,
-        name: "aura4",
+        img: yellowBg,
+        name: "Yellow",
         price: "2,000P",
     },
 ];
 
-export const background = [
+export const headgears = [
     {
         id: 1,
-        bg: rectangle,
-        name: "check",
-        price: "100P",
-    },
-    {
-        id: 2,
-        bg: rectangle,
-        name: "stripe",
-        price: "500P",
-    },
-    {
-        id: 3,
-        bg: rectangle,
-        name: "dot",
+        img: musicHg,
+        name: "Music",
         price: "1,000P",
     },
     {
+        id: 2,
+        img: birdHg,
+        name: "Bird",
+        price: "5,000P",
+    },
+    {
+        id: 3,
+        img: milliHg,
+        name: "Milli",
+        price: "10,000P",
+    },
+    {
         id: 4,
-        bg: rectangle,
-        name: "d",
-        price: "2,000P",
+        img: sleepyHg,
+        name: "Sleepy",
+        price: "20,000P",
     },
 ];
 
-export const accessories = [
+export const facewears = [
     {
         id: 1,
-        acc: rectangle,
-        name: "glass",
-        price: "100P",
+        img: glassesFw,
+        name: "Glasses",
+        price: "20,000P",
     },
     {
         id: 2,
-        acc: rectangle,
-        name: "hat",
-        price: "500P",
+        img: blushFw,
+        name: "Blush",
+        price: "10,000P",
     },
     {
         id: 3,
-        acc: rectangle,
-        name: "blush",
-        price: "1,000P",
+        img: blackFw,
+        name: "Black",
+        price: "5,000P",
     },
     {
         id: 4,
-        acc: rectangle,
-        name: "ribbon",
+        img: lv100,
+        name: "Lv100",
         price: "2,000P",
     },
 ];

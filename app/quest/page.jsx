@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { quests as questsData, missions as missionsData } from '@/data';
@@ -10,8 +10,8 @@ const Quest = () => {
 
     const [quests, setQuests] = useState(questsData);
     const [missions, setMissions] = useState(missionsData);
-    const [selectedQuest, setSelectedQuest] = useState(null); // Keeps track of the selected quest
-    const [selectedMission, setSelectedMission] = useState(null); // Keeps track of the selected mission
+    const [selectedQuest, setSelectedQuest] = useState(null);
+    const [selectedMission, setSelectedMission] = useState(null);
     const [missionInProgress, setMissionInProgress] = useState(null);
 
     // Update quest claimable status based on time elapsed
@@ -27,8 +27,8 @@ const Quest = () => {
             }
             return quest;
         });
-        setQuests(updatedQuests); // Update the quests state with the claimable status
-    }, [quests]); 
+        setQuests(updatedQuests);
+    }, [quests]);
 
     // Handle mission click and redirect
     const handleMissionClick = (mission) => {
@@ -42,7 +42,7 @@ const Quest = () => {
                     m.id === mission.id ? { ...m, isClaimable: true } : m
                 )
             );
-            setSelectedMission(mission); // Select the mission to open the modal
+            setSelectedMission(mission);
             setMissionInProgress(null);
         }, 3000);
     };
@@ -70,12 +70,12 @@ const Quest = () => {
     }, [missionInProgress, missions]);
 
     const handleQuestClick = (quest) => {
-        setSelectedQuest(quest); // Select the quest to open the modal
+        setSelectedQuest(quest);
     };
 
     const handleCloseModal = () => {
-        setSelectedQuest(null); // Close the quest modal
-        setSelectedMission(null); // Close the mission modal
+        setSelectedQuest(null);
+        setSelectedMission(null);
     };
 
     const handleClaim = () => {
@@ -85,7 +85,7 @@ const Quest = () => {
                     quest.id === selectedQuest.id ? { ...quest, isClaimed: true, isClaimable: false } : quest
                 )
             );
-            setSelectedQuest({ ...selectedQuest, isClaimed: true }); // Update the selected quest state
+            setSelectedQuest({ ...selectedQuest, isClaimed: true });
         }
         if (selectedMission) {
             setMissions((prevMissions) =>
@@ -93,7 +93,7 @@ const Quest = () => {
                     mission.id === selectedMission.id ? { ...mission, isClaimed: true, isClaimable: false } : mission
                 )
             );
-            setSelectedMission({ ...selectedMission, isClaimed: true }); // Update the selected mission state
+            setSelectedMission({ ...selectedMission, isClaimed: true });
         }
     };
 
@@ -109,8 +109,8 @@ const Quest = () => {
                         <div 
                         key={quest.id}
                         onClick={() => handleQuestClick(quest)}
-                        className={`flex w-full text-sm justify-between mb-1 bg-[#C4DACC] border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer
-                        ${quest.isClaimed ? 'bg-[#B8D2C3]' : ''}`}>
+                        className={`flex w-full text-sm justify-between mb-1 border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer
+                        ${quest.isClaimed ? 'bg-[#B8D2C3]' : 'bg-[#C4DACC]'}`}>
                             <div className='flex justify-evenly'>
                                 <Image 
                                 src={quest.icon}
@@ -120,8 +120,14 @@ const Quest = () => {
                                 <div className='flex-col justify-center'>
                                     <p>{quest.task}</p>
                                     <p 
-                                    className='text-xs'>{quest.xp} {quest.isClaimable && <span 
-                                    className='font-semibold '>Claimable</span>}</p>
+                                    className='text-xs'>
+                                        {quest.xp} 
+                                        {quest.isClaimed ? (
+                                            <span className='font-semibold ml-2'>✓ Claimed</span>
+                                        ) : (
+                                            quest.isClaimable && <span className='font-semibold ml-2'>Claimable</span>
+                                        )}
+                                    </p>
                                 </div>
                             </div>
                             <div 
@@ -138,18 +144,30 @@ const Quest = () => {
                     {missions.map((mission) => (
                         <div key={mission.id}
                         onClick={() => handleMissionClick(mission)}
-                            className={`flex w-full text-sm justify-between mb-1 bg-[#C4DACC] border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer
-                            ${mission.isClaimed ? 'bg-[#B8D2C3]' : ''}`} // Fixed: This was using `quests.isClaimed` instead of `mission.isClaimed`
-                        >
+                            className={`flex w-full text-sm justify-between mb-1 border rounded-xl border-[#004A50] px-5 py-5 cursor-pointer
+                            ${mission.isClaimed ? 'bg-[#B8D2C3]' : 'bg-[#C4DACC]'}`}>
                             <div className='flex justify-evenly'>
                                 <Image 
                                     src={mission.icon}
                                     alt='user icon'
                                     className='mr-3'
                                 />
-                                <p>{mission.task}</p>
+                                <div className='flex-col justify-center'>
+                                    <p>{mission.task}</p>
+                                    <p 
+                                    className='text-xs'>
+                                        {mission.xp} 
+                                        {mission.isClaimed ? (
+                                            <span className='font-semibold ml-2'>✓ Claimed</span>
+                                        ) : (
+                                            mission.isClaimable && <span className='font-semibold ml-2'>Claimable</span>
+                                        )}
+                                    </p>
+                                </div>
                             </div>
-                            <div className='flex items-center'>{mission.xp}</div>
+                            <div 
+                            className='flex items-center'>{mission.arrow}
+                            </div>
                         </div>
                     ))}
                 </div>

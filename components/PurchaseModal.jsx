@@ -18,7 +18,7 @@ const PurchaseModal = ({show, close, item}) => {
                     onClick={close}/>
 
                     <Image 
-                    src={purchase}
+                    src={item.img}
                     alt='purchase item'
                     className='flex mx-auto'
                     onClick={close}/>

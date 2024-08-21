@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { aura, background, accessories, tapBoosts, chatPotions, batteryPotions } from '@/data';
+import { backgrounds, headgears, facewears, tapBoosts, chatPotions, batteryPotions } from '@/data';
 import PurchaseModal from '@/components/PurchaseModal';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
@@ -33,18 +33,18 @@ const Item = () => {
 
 
                     {/** CLOSET - Aura */}
-                    <h3 className='m-3 ml-6'>Closet</h3>
-                    <p className='mb-2 ml-6'>Aura</p>
+                    <h3 className='m-3 ml-6'>Gift Shop</h3>
+                    <p className='mb-2 ml-6'>Background</p>
 
                     <div>
                         <div className='flex justify-around items-center '>
-                            {aura.map((aura, index) => (
+                            {backgrounds.map((bg, index) => (
                                 <div key={index}
                                 className='flex flex-col justify-center items-center cursor-pointer'
-                                onClick={() => openModal(aura)}>
-                                    <Image src={aura.aura} />
-                                    <p>{aura.name}</p>
-                                    <p>{aura.price}</p>
+                                onClick={() => openModal(bg)}>
+                                    <Image src={bg.img} />
+                                    <p>{bg.name}</p>
+                                    <p>{bg.price}</p>
                                 </div>
                             ))}
                         </div>
@@ -55,17 +55,17 @@ const Item = () => {
 
 
                     {/** CLOSET - Background */}
-                    <h3 className='m-3 mt-0 mb-2 ml-6'>Background</h3>
+                    <h3 className='m-3 mt-0 mb-2 ml-6'>Headgear</h3>
 
                     <div>
                         <div className='flex justify-around items-center '>
-                            {background.map((bg, index) => (
+                            {headgears.map((hg, index) => (
                                 <div key={index}
                                 className='flex flex-col justify-center items-center cursor-pointer'
-                                onClick={() => openModal(bg)}>
-                                    <Image src={bg.bg} />
-                                    <p>{bg.name}</p>
-                                    <p>{bg.price}</p>
+                                onClick={() => openModal(hg)}>
+                                    <Image src={hg.img} />
+                                    <p>{hg.name}</p>
+                                    <p>{hg.price}</p>
                                 </div>
                             ))}
                         </div>
@@ -82,22 +82,25 @@ const Item = () => {
 
                     <div>
                         <div className='flex justify-around items-center '>
-                            {accessories.map((acc, index) => (
+                            {facewears.map((fw, index) => (
                                 <div key={index}
                                 className='flex flex-col justify-center items-center cursor-pointer'
-                                onClick={() => openModal(acc)}
+                                onClick={() => openModal(fw)}
                                 >
-                                    <Image src={acc.acc} />
-                                    <p>{acc.name}</p>
-                                    <p>{acc.price}</p>
+                                    <Image src={fw.img} />
+                                    <p>{fw.name}</p>
+                                    <p>{fw.price}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-[25rem] border-[#9CB2A4]'></hr>
 
-
-
+                </div>
+            </div>
+            
+            {/** CLOSET - Aura */}
+            <div className='bg-[#9CB2A4] min-h-screen p-4'>
+                <div className='w-full bg-[#C4DACC] flex flex-col rounded-xl p-2 border border-[#004A50]'>
 
                     {/** BOOST - Tap Boost */}
                     <h3 className='m-3 mb-3 ml-6'>Tap Boost</h3>

@@ -18,6 +18,18 @@ import questIcon from "./questIcon.svg";
 import claimFace from "./claimFace.svg";
 import claimedFace from "./claimedFace.svg";
 import claimableFace from "./claimableFace.svg";
+import purpleBg from "./purple-bg.svg";
+import blueBg from "./blue-bg.svg";
+import greenBg from "./green-bg.svg";
+import yellowBg from "./yellow-bg.svg";
+import musicHg from "./music-hg.svg";
+import birdHg from "./bird-hg.svg";
+import milliHg from "./milli-hg.svg";
+import sleepyHg from "./sleepy-hg.svg";
+import glassesFw from "./glasses-fw.svg";
+import blackFw from "./black-fw.svg";
+import blushFw from "./blush-fw.svg";
+import lv100 from "./lv100-fw.svg";
 
 export {
     miner,
@@ -39,5 +51,5 @@ export {
     questIcon,
     claimFace,
     claimedFace,
-    claimableFace
+    claimableFace, purpleBg, blueBg, greenBg, yellowBg, musicHg, birdHg, milliHg, sleepyHg, glassesFw, blushFw, blackFw, lv100
 }
