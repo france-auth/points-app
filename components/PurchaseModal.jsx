@@ -1,5 +1,5 @@
 import React from 'react'
-import { backIcon, purchase } from '@/public/assets/images'
+import { backIcon} from '@/public/assets/images'
 import Image from 'next/image'
 
 const PurchaseModal = ({show, close, item}) => {
@@ -18,10 +18,9 @@ const PurchaseModal = ({show, close, item}) => {
                     onClick={close}/>
 
                     <Image 
-                    src={item.img}
-                    alt='purchase item'
-                    className='flex mx-auto'
-                    onClick={close}/>
+                    src={item.modalImg}
+                    alt={`${item.img} img`}
+                    className='flex mx-auto'/>
                 </div>
 
                 <div className='flex flex-col items-center px-3 justify-center'>
@@ -30,7 +29,7 @@ const PurchaseModal = ({show, close, item}) => {
                             {item.name} ({item.price})
                         </p>
                         <p className='text-center'>
-                            Increase your max petting capacity - boosts hourly recharge rate by 5s
+                            {item.info}
                         </p>
                 </div>
 

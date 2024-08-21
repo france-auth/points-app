@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { backgrounds, headgears, facewears, tapBoosts, chatPotions, batteryPotions } from '@/data';
+import { backgrounds, headgears, facewears, tapBoosts, chatRechargePotions } from '@/data';
 import PurchaseModal from '@/components/PurchaseModal';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
@@ -27,14 +27,14 @@ const Item = () => {
         <Layout>
             <PurchaseModal show={showModal} close={closeModal} item={selectedItem}/>
 
-            {/** CLOSET - Aura */}
-            <div className='bg-[#9CB2A4] min-h-screen p-4'>
+            {/** BACKGROUNDS */}
+            <div className='bg-[#9CB2A4] text-sm p-4 pb-0'>
                 <div className='w-full bg-[#C4DACC] flex flex-col rounded-xl p-2 border border-[#004A50]'>
 
 
-                    {/** CLOSET - Aura */}
-                    <h3 className='m-3 ml-6'>Gift Shop</h3>
-                    <p className='mb-2 ml-6'>Background</p>
+                    {/** BACKGROUNDS */}
+                    <h3 className='m-3 mb-4 ml-6 '>Gift Shop</h3>
+                    <p className='mb-4 ml-6'>Background</p>
 
                     <div>
                         <div className='flex justify-around items-center '>
@@ -54,8 +54,8 @@ const Item = () => {
 
 
 
-                    {/** CLOSET - Background */}
-                    <h3 className='m-3 mt-0 mb-2 ml-6'>Headgear</h3>
+                    {/**  HEADGEARS */}
+                    <p className='m-2 ml-6'>Headgear</p>
 
                     <div>
                         <div className='flex justify-around items-center '>
@@ -64,8 +64,10 @@ const Item = () => {
                                 className='flex flex-col justify-center items-center cursor-pointer'
                                 onClick={() => openModal(hg)}>
                                     <Image src={hg.img} />
-                                    <p>{hg.name}</p>
-                                    <p>{hg.price}</p>
+                                    <div className='flex-col justify-center items-center'>
+                                        <p>{hg.name}</p>
+                                        <p>{hg.price}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -76,12 +78,10 @@ const Item = () => {
 
 
 
-                    {/** BOOST - Accessories */}
-                    <h3 className='m-3 mb-2 ml-6'>Boost</h3>
-                    <p className='mb-2 ml-6'>Accessories</p>
-
+                    {/** FACEWEARS */}
+                    <p className='m-2 ml-6'>Facewear</p>
                     <div>
-                        <div className='flex justify-around items-center '>
+                        <div className='flex justify-around items-center mb-5'>
                             {facewears.map((fw, index) => (
                                 <div key={index}
                                 className='flex flex-col justify-center items-center cursor-pointer'
@@ -97,23 +97,54 @@ const Item = () => {
 
                 </div>
             </div>
+
             
-            {/** CLOSET - Aura */}
-            <div className='bg-[#9CB2A4] min-h-screen p-4'>
+            {/** BOOSTS */}
+            <div className='bg-[#9CB2A4] text-sm p-4'>
                 <div className='w-full bg-[#C4DACC] flex flex-col rounded-xl p-2 border border-[#004A50]'>
 
-                    {/** BOOST - Tap Boost */}
-                    <h3 className='m-3 mb-3 ml-6'>Tap Boost</h3>
+                    {/** BOOST - Chatting Potions */}
+                    <h3 className='m-3 mb-3 ml-6'>Boost</h3>
+                    <p className='m-2 ml-6'>Chat Recharge Potion</p>
+                    <div>
+                        <div 
+                        className='flex flex-col justify-evenly items-center'>
+                            {chatRechargePotions.map((crp, index) => (
+                                <div key={index}
+                                className='flex justify-between items-center w-full px-6 cursor-pointer'
+                                onClick={() => openModal(crp)}
+                                >
+                                    <div className='flex mb-4'>
+                                        <Image src={crp.img} />
+                                        <div className='flex flex-col justify-center ml-4 mb-2'>
+                                            <p>{crp.name}</p>
+                                            <p>{crp.price}</p>
+                                        </div>
+                                    </div>
+                                    <p className='flex font-medium py-4 mb-4'>{crp.arrow}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-[25rem] border-[#9CB2A4]'></hr>
+
+
+
+
+                    {/** BOOST - Tap Boosts */}
+                    <h3 className='m-2 ml-6'>Tap Boost</h3>
                     <div>
                         <div className='flex flex-col justify-evenly items-center'>
                             {tapBoosts.map((tap, index) => (
                                 <div key={index}
-                                className='flex justify-between items-center w-full px-6 cursor-pointer'>
+                                className='flex justify-between items-center w-full px-6 cursor-pointer'
+                                onClick={() => openModal(tap)}
+                                >
                                     <div className='flex mb-4'>
                                         <Image src={tap.img} />
-                                        <div className='flex flex-col justify-center ml-4 mb-2'>
+                                        <div className='flex flex-col text-sm justify-center ml-4 mb-2'>
                                             <p>{tap.name}</p>
-                                            <p>{tap.xp}</p>
+                                            <p>{tap.price}</p>
                                         </div>
                                     </div>
                                     <p className='flex font-medium py-4 mb-4'>{tap.arrow}</p>
@@ -121,56 +152,6 @@ const Item = () => {
                             ))}
                         </div>
                     </div>
-                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-[25rem] border-[#9CB2A4]'></hr>
-
-
-
-
-                    {/** BOOST - Chatting Potions */}
-                    <h3 className='m-3 mb-3 mt-0 ml-6'>CHatting Potions</h3>
-                    <div>
-                        <div className='flex flex-col justify-evenly items-center'>
-                            {chatPotions.map((chat, index) => (
-                                <div key={index}
-                                className='flex justify-between items-center w-full px-6 cursor-pointer'>
-                                    <div className='flex mb-4'>
-                                        <Image src={chat.img} />
-                                        <div className='flex flex-col text-sm justify-center ml-4 mb-2'>
-                                            <p>{chat.name}</p>
-                                            <p>{chat.xp}</p>
-                                        </div>
-                                    </div>
-                                    <p className='flex font-medium py-4 mb-4'>{chat.arrow}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-[25rem] border-[#9CB2A4]'></hr>
-
-
-
-
-                    {/** BOOST - Battery Potions */}
-                    <h3 className='m-3 mb-3 mt-0 ml-6'>Battery Potions</h3>
-                    <div>
-                        <div className='flex flex-col justify-evenly items-center'>
-                            {batteryPotions.map((battery, index) => (
-                                <div key={index}
-                                className='flex justify-between items-center w-full px-6 cursor-pointer'>
-                                    <div className='flex mb-4'>
-                                        <Image src={battery.img} />
-                                        <div className='flex flex-col text-sm justify-center ml-4 mb-2'>
-                                            <p>{battery.name}</p>
-                                            <p>{battery.xp}</p>
-                                        </div>
-                                    </div>
-                                    <p className='flex font-medium py-4 mb-4'>{battery.arrow}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    
-                    <hr className='flex flex-col items-center justify-center mx-auto mt-4 w-[25rem] border-[#9CB2A4]'></hr>
                 </div>
             </div>
         </Layout>

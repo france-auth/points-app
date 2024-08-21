@@ -1,10 +1,40 @@
 import {
-    miner,
     userIcon,
-    rectangle,
     emptyHeart,
     inviteIcon,
-    questIcon, purpleBg, blueBg, greenBg, yellowBg, musicHg, birdHg, milliHg, sleepyHg, glassesFw, blushFw, blackFw, lv100} from '@/public/assets/images/index'
+    questIcon,
+    purpleBg,
+    purpleBgModal,
+    blueBg,
+    blueBgModal,
+    greenBg,
+    greenBgModal,
+    yellowBg,
+    yellowBgModal,
+    musicHg,
+    musicHgModal,
+    birdHg,
+    birdHgModal,
+    milliHg,
+    milliHgModal,
+    sleepyHg,
+    sleepyHgModal,
+    glassesFw,
+    glassesFwModal,
+    blushFw,
+    blushFwModal,
+    blackFw,
+    blackFwModal,
+    lv100,
+    lv100Modal,
+    popsicle,
+    popsicleModal,
+    mushroom,
+    mushroomModal,
+    loveBubble,
+    loveBubbleModal,
+    bubble,
+    bubbleModal} from '@/public/assets/images/index'
 
 export const hashs = [
     {
@@ -277,87 +307,6 @@ export const rankings = [
     },
 ];
 
-export const backgrounds = [
-    {
-        id: 1,
-        img: purpleBg,
-        name: "Purple",
-        price: "100P",
-    },
-    {
-        id: 2,
-        img: blueBg,
-        name: "Blue",
-        price: "500P",
-    },
-    {
-        id: 3,
-        img: greenBg,
-        name: "Green",
-        price: "1,000P",
-    },
-    {
-        id: 4,
-        img: yellowBg,
-        name: "Yellow",
-        price: "2,000P",
-    },
-];
-
-export const headgears = [
-    {
-        id: 1,
-        img: musicHg,
-        name: "Music",
-        price: "1,000P",
-    },
-    {
-        id: 2,
-        img: birdHg,
-        name: "Bird",
-        price: "5,000P",
-    },
-    {
-        id: 3,
-        img: milliHg,
-        name: "Milli",
-        price: "10,000P",
-    },
-    {
-        id: 4,
-        img: sleepyHg,
-        name: "Sleepy",
-        price: "20,000P",
-    },
-];
-
-export const facewears = [
-    {
-        id: 1,
-        img: glassesFw,
-        name: "Glasses",
-        price: "20,000P",
-    },
-    {
-        id: 2,
-        img: blushFw,
-        name: "Blush",
-        price: "10,000P",
-    },
-    {
-        id: 3,
-        img: blackFw,
-        name: "Black",
-        price: "5,000P",
-    },
-    {
-        id: 4,
-        img: lv100,
-        name: "Lv100",
-        price: "2,000P",
-    },
-];
-
 export const rankPageButtons = [
     {
         page: 1
@@ -376,47 +325,145 @@ export const rankPageButtons = [
     },
 ]
 
+export const backgrounds = [
+    {
+        id: 1,
+        img: purpleBg,
+        modalImg: purpleBgModal,
+        name: "Purple",
+        info: "Equip this skin to send 2 extra chat messages daily",
+        price: "100P",
+    },
+    {
+        id: 2,
+        img: blueBg,
+        modalImg: blueBgModal,
+        name: "Blue",
+        info: "Equip this skin to increase affection 20% faster",
+        price: "500P",
+    },
+    {
+        id: 3,
+        img: greenBg,
+        modalImg: greenBgModal,
+        name: "Green",
+        info: "Equip this skin to slow battery drain by 20%",
+        price: "1,000P",
+    },
+    {
+        id: 4,
+        img: yellowBg,
+        modalImg: yellowBgModal,
+        name: "Yellow",
+        info: "Equip this skin to boost other equipped items' effects by 10%",
+        price: "2,000P",
+    },
+];
+
+export const headgears = [
+    {
+        id: 1,
+        img: musicHg,
+        modalImg: musicHgModal,
+        name: "Music",
+        info: "Wanna chat about music?",
+        price: "1,000P",
+    },
+    {
+        id: 2,
+        img: birdHg,
+        modalImg: birdHgModal,
+        name: "Bird",
+        info: "A bird's nest on your head!",
+        price: "10,000P",
+        price: "5,000P",
+    },
+    {
+        id: 3,
+        img: milliHg,
+        modalImg: milliHgModal,
+        name: "Milly",
+        info: "How about a Soul in military style?",
+    },
+    {
+        id: 4,
+        img: sleepyHg,
+        modalImg: sleepyHgModal,
+        name: "Night",
+        info: "Struggling with insomnia? Let's chat and help you drift off to a deep sleep.",
+        price: "20,000P",
+    },
+];
+
+export const facewears = [
+    {
+        id: 1,
+        img: glassesFw,
+        modalImg: glassesFwModal,
+        name: "Glasses",
+        info: "Calling all nerds! This item's for you.",
+        price: "20,000P",
+    },
+    {
+        id: 2,
+        img: blushFw,
+        modalImg: blushFwModal,
+        name: "Blush",
+        info: "In the mood for a heart-fluttering chat?",
+        price: "10,000P",
+    },
+    {
+        id: 3,
+        img: blackFw,
+        modalImg: blackFwModal,
+        name: "Black",
+        info: "Are you into hip-hop?",
+        price: "5,000P",
+    },
+    {
+        id: 4,
+        img: lv100,
+        modalImg: lv100Modal,
+        name: "Lv100",
+        info: "Ultimate level up! Be the strongest Soul",
+        price: "2,000P",
+    },
+];
+
 export const tapBoosts = [
     {
-        img: rectangle,
-        name: "Chat Fill Potion",
-        xp: "+1,000P",
+        img: popsicle,
+        modalImg: popsicleModal,
+        name: "Popsicle",
+        info: "Double tap points for 30 minutes Purchasable once every 24 hours",
+        price: "1,000P",
         arrow: ">"
     },
     {
-        img: rectangle,
-        name: "Chat Fill Potion",
-        xp: "+10,000P",
-        arrow: ">"
-    },
-]
-
-export const chatPotions = [
-    {
-        img: rectangle,
-        name: "Chat Fill Potion",
-        xp: "+1,000P",
-        arrow: ">"
-    },
-    {
-        img: rectangle,
-        name: "Chat Fill Potion",
-        xp: "+10,000P",
+        img: mushroom,
+        modalImg: mushroomModal,
+        name: "Mushroom",
+        info: "Earn +5 extra points per tap for 30 minutes Purchasable once every 24 hours",
+        price: "10,000P",
         arrow: ">"
     },
 ]
 
-export const batteryPotions = [
+export const chatRechargePotions = [
     {
-        img: rectangle,
-        name: "Battery Fill Potion",
-        xp: "+500",
+        img: bubble,
+        modalImg: bubbleModal,
+        name: "Bubble",
+        info: "Recharge 2 chat sessions Purchasable once every 24 hours",
+        price: "1,000P",
         arrow: ">"
     },
     {
-        img: rectangle,
-        name: "Battery Fill Potion (100%)",
-        xp: "+1,000P",
+        img: loveBubble,
+        modalImg: loveBubbleModal,
+        name: "Love Bubble",
+        info: "Recharge 24 chat sessions Purchasable once every 24 hours",
+        price: "10,000P",
         arrow: ">"
     },
 ]
