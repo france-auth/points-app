@@ -51,7 +51,7 @@ const SignUp = () => {
           <p className="text-center">Signing Up...</p>
         ) : (
           <div>
-            <form onSubmit={handleSubmit} className="xs:space-y-6 xr:space-y-5">
+            <form name="sign-up" onSubmit={handleSubmit} className="xs:space-y-6 xr:space-y-5">
 
               <p className="xs:text-[12.5px] xr:text-[13px]">Email
                 <input
@@ -59,6 +59,7 @@ const SignUp = () => {
                   placeholder="E-mail Address"
                   id="email"
                   name="email"
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -72,6 +73,7 @@ const SignUp = () => {
                   placeholder="Create Password"
                   id="password"
                   name="password"
+                  autoComplete="new-password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -85,6 +87,7 @@ const SignUp = () => {
                   placeholder="Confirm Password"
                   id="confirm-password"
                   name="confirm-password"
+                  autoComplete="new-password"
                   value={confirm}
                   onChange={(e) => setConfirm(e.target.value)}
                   required

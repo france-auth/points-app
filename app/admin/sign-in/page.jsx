@@ -53,13 +53,14 @@ const SignIn = () => {
           <p className="text-center">Signing In...</p>
         ) : (
           <>
-            <form onSubmit={handleSubmit} className="xs:space-y-6 xr:space-y-5">
+            <form autoComplete="" name="sign-in" onSubmit={handleSubmit} className="xs:space-y-6 xr:space-y-5">
               <p className="xs:text-[12.5px] xr:text-[13px]">Email
                 <input
                   type="text"
                   placeholder="E-mail Or Username"
                   id="email"
                   name="email"
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -72,6 +73,7 @@ const SignIn = () => {
                   type="password"
                   id="password"
                   placeholder="Password"
+                  autoComplete="current-password"
                   name="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
