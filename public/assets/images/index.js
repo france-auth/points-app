@@ -41,14 +41,15 @@ import blushFw from "./blush-fw.svg";
 import blushFwModal from "./blush-fw-modal.svg";
 import lv100 from "./lv100-fw.svg";
 import lv100Modal from "./lv100-fw-modal.svg";
-import popsicle from "./popsicle-tb.svg"
-import popsicleModal from "./popsicle-tb-modal.svg"
-import mushroom from "./mushroom-tb.svg"
-import mushroomModal from "./mushroom-tb-modal.svg"
-import loveBubble from "./loveBubble-crp.svg"
-import loveBubbleModal from "./loveBubble-modal-crp.svg"
-import bubble from "./bubble-crp.svg"
-import bubbleModal from "./bubble-modal-crp.svg"
+import popsicle from "./popsicle-tb.svg";
+import popsicleModal from "./popsicle-tb-modal.svg";
+import mushroom from "./mushroom-tb.svg";
+import mushroomModal from "./mushroom-tb-modal.svg";
+import loveBubble from "./loveBubble-crp.svg";
+import loveBubbleModal from "./loveBubble-modal-crp.svg";
+import bubble from "./bubble-crp.svg";
+import bubbleModal from "./bubble-modal-crp.svg";
+import backArrow from "./backarrow.svg"
 
 export {
     miner,
@@ -101,5 +102,6 @@ export {
     loveBubble,
     loveBubbleModal,
     bubble,
-    bubbleModal
+    bubbleModal,
+    backArrow
 }
