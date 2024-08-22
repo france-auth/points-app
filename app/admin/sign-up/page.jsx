@@ -39,7 +39,7 @@ const SignUp = () => {
           <Link href="/">
             <div className="flex items-center cursor-pointer">
               <Image src={backArrow} alt="back arrow" className="w-6 h-6" />
-              <p className="ml-2 text-sm text-color">Back</p>
+              <p className="ml-2 text-base text-color">Back</p>
             </div>
           </Link>
         </div>
@@ -53,7 +53,7 @@ const SignUp = () => {
           <div>
             <form name="sign-up" onSubmit={handleSubmit} className="xs:space-y-6 xr:space-y-5">
 
-              <p className="xs:text-[12.5px] xr:text-[13px]">Email
+              <p className="xs:text-[13px] xr:text-sm">Email
                 <input
                   type="email"
                   placeholder="E-mail Address"
@@ -63,11 +63,11 @@ const SignUp = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
                 />
               </p>
 
-              <p className="xs:text-[12.5px] xr:text-[13px]">Password
+              <p className="xs:text-[13px] xr:text-sm">Password
                 <input
                   type="password"
                   placeholder="Create Password"
@@ -77,11 +77,11 @@ const SignUp = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-full px-4 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
                 />
               </p>
 
-              <p className="xs:text-[12.5px] xr:text-[13px]">Confirm Password
+              <p className="xs:text-[13px] xr:text-sm">Confirm Password
                 <input
                   type="password"
                   placeholder="Confirm Password"
@@ -91,21 +91,21 @@ const SignUp = () => {
                   value={confirm}
                   onChange={(e) => setConfirm(e.target.value)}
                   required
-                  className="w-full px-4 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
                 />
               </p>
 
               <div className="justify-center items-center mb-6">
                 <button
                   type="submit"
-                  className="w-full py-2 text-white bg-[#1f7882] rounded-lg hover:bg-[#004A50] xs:text-sm xr:text-lg">
+                  className="w-full py-3 text-white bg-[#1f7882] rounded-lg hover:bg-[#004A50] xs:text-sm xr:text-lg">
                   Create Account
                 </button>
               </div>
             </form>
 
             <div className="justify-center items-center mt-5">
-              <p className="font-normal text-[13px]">
+              <p className="font-normal text-sm">
                 Have an Account already?{" "}
                 <span className="text-color">
                   <Link href="/admin/sign-in">

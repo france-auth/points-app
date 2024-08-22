@@ -40,7 +40,7 @@ const SignIn = () => {
           <Link href="/admin/sign-up">
             <div className="flex items-center cursor-pointer">
               <Image src={backArrow} alt="back icon"/>
-              <p className="ml-2 text-sm text-color">Back</p>
+              <p className="ml-2 text-base text-color">Back</p>
             </div>
           </Link>
         </div>
@@ -54,7 +54,7 @@ const SignIn = () => {
         ) : (
           <>
             <form autoComplete="" name="sign-in" onSubmit={handleSubmit} className="xs:space-y-6 xr:space-y-5">
-              <p className="xs:text-[12.5px] xr:text-[13px]">Email
+              <p className="xs:text-[13px] xr:text-sm">Email
                 <input
                   type="text"
                   placeholder="E-mail Or Username"
@@ -64,11 +64,11 @@ const SignIn = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
                   />
               </p>
 
-                <p className="xs:text-[12.5px] xr:text-[13px]">Password
+                <p className="xs:text-[13px] xr:text-sm">Password
                   <input
                   type="password"
                   id="password"
@@ -78,20 +78,20 @@ const SignIn = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-full px-4 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
                   />
                 </p>
 
 
                 <button
                 type="submit"
-                className="w-full py-2 text-white text-sm bg-[#1f7882] rounded-lg hover:bg-[#004A50]">
+                className="w-full py-3 text-white xs:text-sm xr:text-lg bg-[#1f7882] rounded-lg hover:bg-[#004A50]">
                 Login
               </button>
             </form>
 
             <div className="justify-center items-center mt-5">
-              <p className="font-semibold text-[13px] cursor-pointer">
+              <p className="font-semibold text-sm cursor-pointer">
                 Forgot Password?{" "}
               </p>
             </div>
