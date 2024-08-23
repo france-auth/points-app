@@ -29,8 +29,7 @@ const Sidebar = ({ navItems }) => {
         {navItems.map((nav) => (
           <Link
             key={nav.id}
-            href={nav.path}
-            onClick={handleClick} // Corrected invocation
+            href={nav.path} // Corrected invocation
             className={`flex items-center xs:px-3 xs:text-[15px] xx:text-base rounded-xl xx:px-4 sm:px-5 py-3 my-2 justify-start ${
               activePath === nav.path ? "bg-[#004A50] text-white" : ""
             }`}
