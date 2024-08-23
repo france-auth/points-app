@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { Bar, BarChart, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
 // Sample data for the last 7 days
 const chartData = [
@@ -20,13 +20,13 @@ const chartData = [
   { day: "Fri", users: 25 },
   { day: "Sat", users: 45 },
   { day: "Sun", users: 60 },
-]
+];
 
 export function Chart() {
   // Calculate percentage difference from yesterday
-  const todayUsers = chartData[chartData.length - 1].users
-  const yesterdayUsers = chartData[chartData.length - 2].users
-  const percentageDifference = ((todayUsers - yesterdayUsers) / yesterdayUsers) * 100
+  const todayUsers = chartData[chartData.length - 1].users;
+  const yesterdayUsers = chartData[chartData.length - 2].users;
+  const percentageDifference = ((todayUsers - yesterdayUsers) / yesterdayUsers) * 100;
 
   return (
     <Card>
@@ -38,8 +38,7 @@ export function Chart() {
         <ResponsiveContainer width="100%" height={275}>
           <BarChart data={chartData}>
             <CartesianGrid vertical={false} />
-            <XAxis dataKey="day" tickLine={false} tickMargin={10} axisLine={false} />
-            <YAxis />
+            {/* Omit XAxis and YAxis here */}
             <Tooltip />
             <Bar dataKey="users" fill="#004A50" radius={4} />
           </BarChart>
@@ -58,5 +57,5 @@ export function Chart() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

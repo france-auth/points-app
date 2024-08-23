@@ -10,7 +10,6 @@ const Dashboard = () => {
       <div className=''>
         <h1>Dashboard</h1>
         <Chart />
-        <Chart />
       </div>
     </Layout>
   )
