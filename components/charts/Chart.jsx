@@ -14,7 +14,7 @@ import {
 // Sample data for the last 7 days
 const chartData = [
   { day: "Mon", users: 30 },
-  { day: "Tues", users: 50 },
+  { day: "Tue", users: 50 },
   { day: "Wed", users: 20 },
   { day: "Thu", users: 40 },
   { day: "Fri", users: 25 },
@@ -38,11 +38,18 @@ export function Chart() {
         <ResponsiveContainer width="100%" height={275}>
           <BarChart data={chartData}>
             <CartesianGrid vertical={false} />
-            {/* Omit XAxis and YAxis here */}
+            {/* Omit XAxis and YAxis */}
             <Tooltip />
             <Bar dataKey="users" fill="#004A50" radius={4} />
           </BarChart>
         </ResponsiveContainer>
+        <div className="flex justify-between mt-2 text-sm text-muted-foreground">
+          {chartData.map((entry, index) => (
+            <div key={index} className="flex-1 text-center">
+              {entry.day}
+            </div>
+          ))}
+        </div>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">

@@ -50,3 +50,35 @@ export const navItems = [
         path: "/alterim/sign-in"
     },
 ];
+
+
+export const dashCards = [
+    {
+        id: 1,
+        title: "Total Users",
+        figure: "5,203",
+        increase: "+20.1%",
+        icon: usersIcon
+    },
+    {
+        id: 2,
+        title: "Daily Active Users",
+        figure: "2,370",
+        increase: "+12.54%",
+        icon: usersIcon
+    },
+    {
+        id: 3,
+        title: "Active Now",
+        figure: "+529",
+        increase: "+7.15%",
+        icon: usersIcon
+    },
+    {
+        id: 4,
+        title: "New Users",
+        figure: "+460",
+        increase: "+19.31%",
+        icon: usersIcon
+    }
+]
