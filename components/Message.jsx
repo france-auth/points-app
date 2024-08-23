@@ -32,7 +32,7 @@ const Message = () => {
             {/* User's Message */}
             <div className="w-full px-3 py-2 xs:text-sm flex flex-col items-end mt-0">
             <p className="bg-[#F5F5F5] w-[80%] text-xs text-right rounded-xl px-3 py-2">
-             What's the latest crypto world today?
+            What's the latest crypto world today?
             </p>
             <p className="text-[.6rem] mr-2 mt-1">Sat 5:09AM</p>
         </div>

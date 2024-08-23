@@ -49,7 +49,6 @@ import loveBubble from "./loveBubble-crp.svg";
 import loveBubbleModal from "./loveBubble-modal-crp.svg";
 import bubble from "./bubble-crp.svg";
 import bubbleModal from "./bubble-modal-crp.svg";
-import backArrow from "./backarrow.svg"
 
 export {
     miner,
@@ -102,6 +101,5 @@ export {
     loveBubble,
     loveBubbleModal,
     bubble,
-    bubbleModal,
-    backArrow
+    bubbleModal
 }

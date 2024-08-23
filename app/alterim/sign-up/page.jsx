@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { backArrow } from "@/public/assets/images";
+import { backArrow } from "@/public/assets/admin-images";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
@@ -108,7 +108,7 @@ const SignUp = () => {
               <p className="font-normal text-sm">
                 Have an Account already?{" "}
                 <span className="text-color">
-                  <Link href="/admin/sign-in">
+                  <Link href="/alterim/admin/sign-in">
                     <button type="button"
                     className="font-semibold">Login</button>
                   </Link>

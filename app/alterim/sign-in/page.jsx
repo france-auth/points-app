@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import { backArrow } from "@/public/assets/images";
+import { backArrow } from "@/public/assets/admin-images";
 import { toast } from "react-toastify";
 
 
@@ -37,7 +37,7 @@ const SignIn = () => {
     <div className="flex justify-center items-center min-h-screen xs:p-5 xr:p-7">
       <div className="bg-white w-full max-w-md xs:p-7 xr:p-8 rounded-2xl shadow-lg">
         <div className="flex items-center mb-5">
-          <Link href="/admin/sign-up">
+          <Link href="/alterim/admin/sign-up">
             <div className="flex items-center cursor-pointer">
               <Image src={backArrow} alt="back icon"/>
               <p className="ml-2 text-base text-color">Back</p>
