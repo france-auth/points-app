@@ -9,7 +9,7 @@ const Users = () => {
       <h1 className='font-bold text-2xl'>Users</h1>
 
       <div className="w-full ">
-        <div className='bg-white w-full rounded-lg mt-4 whitespace-nowrap'>
+        <div className='bg-white w-full rounded-lg mt-3 whitespace-nowrap'>
           {users.map((user) => (
             <div key={user.id}
             className='flex items-center justify-between p-3 border border-b-[#004a50]'>

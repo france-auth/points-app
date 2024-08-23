@@ -32,14 +32,13 @@ const Tasks = () => {
 
   return (
     <Layout>
-      <h1 className='font-bold text-2xl'>Tasks</h1>
+      <h1 className='font-bold text-2xl mb-2'>Tasks</h1>
 
-      <div className="flex justify-center items-center min-h-screen xs:p-5 xr:p-7">
-      <div className="bg-white w-full max-w-md xs:p-7 xr:p-8 rounded-xl shadow-lg">
+      <div className="flex justify-center max-w-full">
+      <div className="bg-white xs:p-7 xr:p-8 rounded-xl shadow-lg">
         <div className="flex items-center mb-5">
           <Link href="/">
             <div className="flex items-center cursor-pointer">
-              <p className="ml-2 text-base text-color">Back</p>
             </div>
           </Link>
         </div>
@@ -96,23 +95,11 @@ const Tasks = () => {
                 <button
                   type="submit"
                   className="w-full py-3 text-white bg-[#1f7882] rounded-lg hover:bg-[#004A50] xs:text-sm xr:text-lg">
-                  Create Account
+                  Create Task
                 </button>
               </div>
             </form>
-
-            <div className="justify-center items-center mt-5">
-              <p className="font-normal text-sm">
-                Have an Account already?{" "}
-                <span className="text-color">
-                  <Link href="/alterim/admin/sign-in">
-                    <button type="button"
-                    className="font-semibold">Login</button>
-                  </Link>
-                </span>
-              </p>
             </div>
-          </div>
         )}
       </div>
     </div>
