@@ -45,7 +45,7 @@ const SignIn = () => {
           </Link>
         </div>
 
-        <h2 className="text-xl text-[#1f7882] font-bold text-center text-color mb-8">
+        <h2 className="text-xl text-[#004A50] font-bold text-center text-color mb-8">
           Sign In
         </h2>
 

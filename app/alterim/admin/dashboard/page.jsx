@@ -11,11 +11,11 @@ const Dashboard = () => {
   return (
       <Layout>
         <h1 className='font-bold text-2xl'>Dashboard</h1>
-        <div className='mb-3 sm:flex sm:flex-wrap'>
+        <div className='mb-3 sm:justify-between sm:flex sm:flex-wrap'>
           {dashCards.map((dash) => (
             <div key={dash.id}
-            className={`bg-white sm:w-1/2 p-5 rounded-lg my-4 w-full`}>
-              <div className='flex flex-1 justify-between'>
+            className={`bg-white sm:w-[48.7%] p-5 rounded-lg shadow-lg my-[10px] w-full`}>
+              <div className='flex justify-between'>
                 <h2 className='font-medium text-sm'>{dash.title}</h2>
                 <Image src={usersIcon}
                 alt='usersIcon'/>
@@ -26,7 +26,7 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-        <Chart />
+        <Chart className="shadow-lg" />
     </Layout>
   )
 }
