@@ -1,12 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Layout from '@/components/AdminDashboard/Layout';
 
 const Tasks = () => {
-  const [confirm, setConfirm] = useState("");
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -29,39 +27,31 @@ const Tasks = () => {
     }
   };
 
-
   return (
     <Layout>
       <h1 className='font-bold text-2xl mb-2'>Tasks</h1>
-
-      <div className="flex justify-center max-w-full">
-      <div className="bg-white xs:p-7 xr:p-8 rounded-xl shadow-lg">
-        <div className="flex items-center mb-5">
-          <Link href="/">
-            <div className="flex items-center cursor-pointer">
-            </div>
-          </Link>
-        </div>
-        <h2 className="text-xl font-bold text-center text-color text-[#1f7882] mb-8">
-          Sign Up
+      <div className="flex w-full justify-center">
+      <div className="bg-white xs:p-5 xr:p-8 rounded-xl shadow-lg ">
+        <h2 className="text-lg font-semibold text-center text-color text-[#004A50] mb-3">
+            Add New Task
         </h2>
 
         {loading ? (
-          <p className="text-center">Signing Up...</p>
+          <p className="text-center">Creating Tasks...</p>
         ) : (
           <div>
             <form name="task" onSubmit={handleSubmit} className="xs:space-y-6 xr:space-y-5">
 
-              <p className="xs:text-[13px] xr:text-sm">Email
+              <p className="xs:text-[13px] xr:text-sm">Task Name
                 <input
                   type="email"
-                  placeholder="E-mail Address"
+                  placeholder="Enter Task Name"
                   id="text"
                   name="text"
                   autoComplete="text"
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-3 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
                 />
               </p>
 
@@ -74,7 +64,7 @@ const Tasks = () => {
                   autoComplete="new-password"
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-3 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
                 />
               </p>
 
@@ -87,14 +77,14 @@ const Tasks = () => {
                   autoComplete="new-password"
                   onChange={(e) => setConfirm(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-3 py-2 rounded-lg border focus:ring focus:ring-[#1f7882]"
                 />
               </p>
 
               <div className="justify-center items-center mb-6">
                 <button
                   type="submit"
-                  className="w-full py-3 text-white bg-[#1f7882] rounded-lg hover:bg-[#004A50] xs:text-sm xr:text-lg">
+                  className="w-full py-2 text-white bg-[#1f7882] rounded-lg hover:bg-[#004A50] xs:text-sm xr:text-lg">
                   Create Task
                 </button>
               </div>

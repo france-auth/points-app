@@ -66,29 +66,34 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex xr:flex-row xs:flex-col xr:items-center xs:items-start xr:justify-between w-full'>
-                    <div className='flex'>
-                        <h2 className="flex font-normal">LOVE
-                        </h2>
-                        <div className='flex xr:justify-start items-center ml-2'>
-                            {love.map((love, index) => (
-                                <Image key={index}
-                                alt='heart img'
-                                src={index < filledHearts ? fullHeart : emptyHeart} 
-                                className='flex ml-1 items-center mt-1'/>
-                            ))}
-                        </div> 
+                <div className='flex xr:flex-row xs:flex-wrap xr:flex-nowrap xs:flex-col xr:items-center xr:justify-between w-full'>
+                    <div className='flex xs:justify-between'>
+                        <div className="flex">
+                            <h2 className="flex font-normal">LOVE
+                            </h2>
+                            <div className='flex xr:justify-start items-center ml-2'>
+                                {love.map((love, index) => (
+                                    <Image key={index}
+                                    alt='heart img'
+                                    src={index < filledHearts ? fullHeart : emptyHeart} 
+                                    className='flex ml-1 items-center justify-center xx:mt-[2px]'/>
+                                ))}
+                            </div> 
+                        </div>
                         <div className='flex xs:justify-center ml-3 justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
                         onClick={openModal2}>
                             <p className='font-semibold bg-[#B9D2C3] text-center'>?</p>
                         </div>
                     </div>
 
-                    <div className='xs:w-full xs:justify-start xr:mt-0 xs:mt-2 flex xr:w-[43%] xr:justify-between'>
-                        <p className='flex xr:mr-1 xs:mr-2'>BATTERY</p>
-                        <Image
-                        src={batteryModal}
-                        alt='battery bar'/>
+                    <div className='xs:items-center xr:mt-0 xs:mt-2 xs:justify-between flex'>
+                        <div className="flex ">
+                            <p className='flex'>BATTERY</p>
+                            <Image
+                            src={fullBattery}
+                            alt='battery bar'
+                            className="ml-3"/>
+                        </div>
                         <div className='flex  xs:justify-center xr:ml-2 xs:ml-4 justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
                         onClick={openModal3}>
                             <p className='font-semibold bg-[#B9D2C3] text-center'>?</p>

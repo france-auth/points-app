@@ -33,7 +33,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen xs:p-5 xr:p-7">
+    <div className="flex justify-center items-center xs:min-h-screen xr:h-screen xs:p-5 xr:p-7">
       <div className="bg-white w-full max-w-md xs:p-7 xr:p-8 rounded-xl shadow-lg">
         <div className="flex items-center mb-5">
           <Link href="/">
@@ -43,7 +43,7 @@ const SignUp = () => {
             </div>
           </Link>
         </div>
-        <h2 className="text-xl font-bold text-center text-color text-[#1f7882] mb-8">
+        <h2 className="text-xl font-bold text-center text-color text-[#004A50] mb-8">
           Sign Up
         </h2>
 
