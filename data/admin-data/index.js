@@ -177,3 +177,32 @@ export const users = [
         
     },
 ]
+
+
+export const settings = [
+    {
+        name: "Category",
+        value: "Value",
+        color: "#f4e34e"
+    },
+    {
+        name: "Account",
+        value: "true",
+        color: "#004850"
+    },
+    {
+        name: "Notifications",
+        value: "false",
+        color: "#004850"
+    },
+    {
+        name: "Language",
+        value: "English",
+        color: "#004850"
+    },
+    {
+        name: "Theme",
+        value: "Light",
+        color: "#004850"
+    }
+]
