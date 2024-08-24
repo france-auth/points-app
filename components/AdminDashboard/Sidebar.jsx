@@ -25,7 +25,7 @@ const Sidebar = ({ navItems }) => {
 
   return (
     <div className="flex sticky top-0 h-screen">
-      <ul className="bg-white flex flex-col xs:px-3 sm:pl-8 sm:pr-0 xs:py-6 xx:py-10 justify-start ">
+      <ul className="bg-white  flex flex-col xs:px-3 sm:pl-8 sm:pr-0 xs:py-6 xx:py-10 justify-start ">
         {navItems.map((nav) => (
           <Link
             key={nav.id}

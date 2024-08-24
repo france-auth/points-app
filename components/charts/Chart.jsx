@@ -13,13 +13,13 @@ import {
 
 // Sample data for the last 7 days
 const chartData = [
-  { day: "Mon", users: 30 },
-  { day: "Tue", users: 50 },
-  { day: "Wed", users: 20 },
-  { day: "Thu", users: 40 },
-  { day: "Fri", users: 25 },
-  { day: "Sat", users: 45 },
-  { day: "Sun", users: 60 },
+  { day: "Mon", users: 80 },
+  { day: "Tue", users: 150 },
+  { day: "Wed", users: 78},
+  { day: "Thu", users: 120 },
+  { day: "Fri", users: 95 },
+  { day: "Sat", users: 135 },
+  { day: "Sun", users: 180 },
 ];
 
 export function Chart() {
@@ -56,10 +56,10 @@ export function Chart() {
           Today: {todayUsers} users joined{" "}
           <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="leading-none text-muted-foreground">
+        <div className="overflow-y-hidden leading-none text-muted-foreground">
           {`Total Users: ${chartData.reduce((acc, data) => acc + data.users, 0)}`}
         </div>
-        <div className="leading-none text-muted-foreground">
+        <div className="overflow-y-hidden leading-none text-muted-foreground">
           {`Change from yesterday: ${percentageDifference.toFixed(2)}%`}
         </div>
       </CardFooter>

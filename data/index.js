@@ -375,7 +375,6 @@ export const headgears = [
         modalImg: birdHgModal,
         name: "Bird",
         info: "A bird's nest on your head!",
-        price: "10,000P",
         price: "5,000P",
     },
     {
@@ -384,6 +383,7 @@ export const headgears = [
         modalImg: milliHgModal,
         name: "Milly",
         info: "How about a Soul in military style?",
+        price: "10,000P",
     },
     {
         id: 4,

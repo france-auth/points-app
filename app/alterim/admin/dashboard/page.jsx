@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
       <Layout>
         <h1 className='font-bold text-2xl'>Dashboard</h1>
-        <div className='mb-3 sm:justify-between sm:flex sm:flex-wrap'>
+        <div className='xs:mb-0 sm:mb-2 sm:justify-between sm:flex sm:flex-wrap'>
           {dashCards.map((dash) => (
             <div key={dash.id}
             className={`bg-white sm:w-[48.7%] p-5 rounded-lg shadow-lg my-[10px] w-full`}>
@@ -26,7 +26,7 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-        <Chart className="shadow-lg" />
+        <Chart className="shadow-l" />
     </Layout>
   )
 }

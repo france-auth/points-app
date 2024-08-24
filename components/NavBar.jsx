@@ -8,6 +8,7 @@ const NavBar = ({ navLinks }) => {
     
 
     const [activePath, setActivePath] = useState("");
+    const [isOnboarding, setOnboarding] = useState(false);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -22,21 +23,25 @@ const NavBar = ({ navLinks }) => {
 
     return (
         <div>
-            <ul className="xs:px-1 bg-[#C4DACC] xx:px-2 xs:w-full flex px-2 py-3 mt-1 mb-3 list-none justify-center">
-            {navLinks.map((nav) => (
-                <Link
-                key={nav.id}
-                href={nav.path}
-                className={`flex xs:px-1 xs:text-[15px] xx:text-base xx:px-2 px-2 py-2 ${
-                    activePath === nav.path
-                    ? "underline font-bold"
-                    : ""
-                }`}>
-                    {nav.title}
-                </Link>
-            ))}
-            </ul>
-            <hr className='border-[#004A50]' />
+            {isOnboarding ? null : (
+                <div>
+                    <ul className="xs:px-1 bg-[#C4DACC] xx:px-2 xs:w-full flex px-2 py-3 mt-1 mb-3 list-none justify-center">
+                {navLinks.map((nav) => (
+                    <Link
+                    key={nav.id}
+                    href={nav.path}
+                    className={`flex xs:px-1 xs:text-[15px] xx:text-base xx:px-2 px-2 py-2 ${
+                        activePath === nav.path
+                        ? "underline font-bold"
+                        : ""
+                    }`}>
+                        {nav.title}
+                    </Link>
+                ))}
+                </ul>
+                <hr className='border-[#004A50]' />
+                </div>
+            )}
         </div>
     )
 }
