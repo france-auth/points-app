@@ -61,7 +61,7 @@ const Message = () => {
                 value={inputValue}
                 onChange={handleInputChange}
                 disabled={isSubmitting}
-                className={`w-full mb-0 mt-3 text-white xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-lg border focus:ring focus:ring-[#367378] ${
+                className={`w-full mb-0 mt-3 text-white xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-lg border ${
                 inputValue && !isSubmitting ? "bg-[#004a50]" : ""
                 }`}
             />
