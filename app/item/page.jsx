@@ -34,7 +34,7 @@ const Item = () => {
 
                     {/** BACKGROUNDS */}
                     <h3 className='m-3 mb-4 ml-6 '>Gift Shop</h3>
-                    <p className='mb-4 ml-6'>Background</p>
+                    <p className='mb-4 ml-6'>background</p>
 
                     <div>
                         <div className='flex justify-around items-center '>
@@ -58,13 +58,14 @@ const Item = () => {
                     <p className='m-2 ml-6'>Headgear</p>
 
                     <div>
-                        <div className='flex justify-around items-center '>
+                        <div className='flex justify-around items-center'>
                             {headgears.map((hg, index) => (
                                 <div key={index}
-                                className='flex flex-col justify-center items-center cursor-pointer'
+                                className='flex flex-col items-center cursor-pointer'
                                 onClick={() => openModal(hg)}>
-                                    <Image src={hg.img} alt='headgear ing' />
-                                    <div className='flex-col justify-center items-center'>
+                                    <Image src={hg.img} alt='headgear ing' 
+                                    height={80}/>
+                                    <div className='flex-col justify-center text-center'>
                                         <p>{hg.name}</p>
                                         <p>{hg.price}</p>
                                     </div>
@@ -79,7 +80,7 @@ const Item = () => {
 
 
                     {/** FACEWEARS */}
-                    <p className='m-2 ml-6'>Facewear</p>
+                    <p className='m-2 ml-6'>Faceware</p>
                     <div>
                         <div className='flex justify-around items-center mb-5'>
                             {facewears.map((fw, index) => (
