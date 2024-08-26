@@ -4,6 +4,7 @@ import Miner from "@/components/Miner";
 const Message = () => {
     const [inputValue, setInputValue] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [hasSubmitted, setHasSubmitted] = useState(false);
     const [placeholderVisible, setPlaceholderVisible] = useState(true);
     const [displayText, setDisplayText] = useState(""); // For managing "..." and "TAP THE FACE"
 
@@ -28,12 +29,13 @@ const Message = () => {
         // Reset input to its normal state after miner is clicked
         setDisplayText(""); // Clear the "TAP THE FACE" text
         setIsSubmitting(false); // Allow new input
+        setHasSubmitted(true); // Allow new input
         setPlaceholderVisible(true); // Show placeholder again
     };
 
     return (
         <>
-            <Miner handleMinerClick={handleMinerClick} displayText={displayText} />
+            <Miner handleMinerClick={handleMinerClick} hasSubmitted={hasSubmitted} displayText={displayText} />
             <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-center items-center h-[25rem]">
                 {/* User's Message */}
                 <div className="w-full px-3 py-2 xs:text-sm flex flex-col items-end mt-0">
