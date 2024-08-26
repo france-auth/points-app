@@ -5,7 +5,6 @@ import HomePage from "@/components/HomePage"
 import Loader from "@/components/Loader";
 import Message from "@/components/Message";
 import Miner from "@/components/Miner";
-import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
@@ -13,8 +12,6 @@ export default function Home() {
       <Loader />
       <HomePage />
       <HashTags />
-      <Miner />
-      <NavBar />
       <Message />
     </main>
   );

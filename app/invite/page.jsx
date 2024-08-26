@@ -34,7 +34,7 @@ const Invite = () => {
 
 
     {return !hasReferrals ? (
-            <Layout>
+            <Layout isNavbarVisible={true}>
                 <InviteModal 
                 isOpen={showModal} 
                 isClosed={closeModal}
@@ -57,7 +57,7 @@ const Invite = () => {
                 </div>
             </Layout>
         ) : (
-                <Layout>
+                <Layout isNavbarVisible={true}>
                     <InviteModal 
                     isOpen={showModal} 
                     isClosed={closeModal}

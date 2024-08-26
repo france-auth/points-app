@@ -92,7 +92,7 @@ const Quest = () => {
     };
 
     return (
-        <Layout>
+        <Layout isNavbarVisible={true}>
             <div className="flex flex-col items-center p-4 min-h-screen max-w-full bg-[#9CB2A4]">
                 <h1 className="font-bold mt-4">DAILY CHECK IN</h1>
                 <p>Get your daily points</p>

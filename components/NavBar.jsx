@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
-const NavBar = ({ navLinks }) => {
+const NavBar = ({ navLinks, isVisible }) => {
     
 
     const [activePath, setActivePath] = useState("");
@@ -23,7 +23,7 @@ const NavBar = ({ navLinks }) => {
 
     return (
         <div>
-            {isOnboarding ? null : (
+            {isOnboarding || !isVisible ? null : (
                 <div>
                     <ul className="xs:px-1 bg-[#C4DACC] xx:px-2 xs:w-full flex px-2 py-3 mt-1 mb-3 list-none justify-center">
                 {navLinks.map((nav) => (
