@@ -1,29 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { miner } from '@/public/assets/images';
-import { useState } from "react";
 import { createPortal } from "react-dom";
 import Layout from '@/components/Layout';
 
 const Miner = ({ displayText, handleMinerClick }) => {
     const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-    const [animations, setAnimations] = useState([]); // Array to store multiple animations
+    const [animations, setAnimations] = useState([]);
 
     const handleClick = (event) => {
         if (displayText === "TAP THE FACE") {
             const newAnimation = {
-                id: Date.now(), // Unique ID for each animation instance
+                id: Date.now(),
                 x: event.clientX,
                 y: event.clientY,
             };
-            setAnimations([...animations, newAnimation]);
+
+            // Update animations array with the new animation
+            setAnimations(prevAnimations => [...prevAnimations, newAnimation]);
 
             handleMinerClick();
-            setIsNavbarVisible(true);  // Only show navbar when "TAP THE FACE" is displayed
+            setIsNavbarVisible(true);
 
+            // Remove the animation after 3 seconds
             setTimeout(() => {
-                setAnimations((prev) => prev.filter(animation => animation.id !== newAnimation.id));
-            }, 3000);  // Remove animation after its duration (3 seconds)
+                setAnimations(prevAnimations => prevAnimations.filter(animation => animation.id !== newAnimation.id));
+            }, 3000);
         }
     };
 
@@ -39,6 +41,7 @@ const Miner = ({ displayText, handleMinerClick }) => {
                     />
                 </div>
 
+                {/* Render all active animations */}
                 {animations.map(({ id, x, y }) => (
                     createPortal(
                         <div
