@@ -1,9 +1,5 @@
-"use client";
-
 import React, { useState } from "react";
-//import miner
 import Miner from "@/components/Miner";
-import Layout from "./Layout";
 
 const Message = () => {
     const [inputValue, setInputValue] = useState("");
@@ -37,7 +33,7 @@ const Message = () => {
 
     return (
         <>
-        <Miner handleMinerClick={handleMinerClick} />
+            <Miner handleMinerClick={handleMinerClick} displayText={displayText} />
             <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-center items-center h-[25rem]">
                 {/* User's Message */}
                 <div className="w-full px-3 py-2 xs:text-sm flex flex-col items-end mt-0">

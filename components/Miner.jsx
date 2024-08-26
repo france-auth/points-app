@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import Image from 'next/image';
 import { miner } from '@/public/assets/images';
@@ -7,21 +5,22 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import Layout from '@/components/Layout';
 
-
-const Miner = ({handleMinerClick}) => {
+const Miner = ({ displayText, handleMinerClick }) => {
     const [isNavbarVisible, setIsNavbarVisible] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
     const handleClick = (event) => {
-        setPosition({ x: event.clientX, y: event.clientY });
-        setIsAnimating(true);
-        setTimeout(() => {
-            setIsAnimating(false)
-        }, 3000);   // Animation duration (3 seconds)
-        handleMinerClick();
-        setIsNavbarVisible(true);
-};
+        if (displayText === "TAP THE FACE") {
+            setPosition({ x: event.clientX, y: event.clientY });
+            setIsAnimating(true);
+            setTimeout(() => {
+                setIsAnimating(false);
+            }, 3000);   // Animation duration (3 seconds)
+            handleMinerClick();
+            setIsNavbarVisible(true);  // Only show navbar when "TAP THE FACE" is displayed
+        }
+    };
 
     return (
         <>
@@ -40,17 +39,14 @@ const Miner = ({handleMinerClick}) => {
                     className="absolute animate-fly-up-fade"
                     style={{ top: position.y, left: position.x }}
                     >
-                        <div className="border-[1px] border-[#004A50] bg-[#B8D2C3]text-xl font-bold rounded-3xl"><p className='px-3 py-1 font-bold'>+ 4P</p></div>
+                        <div className="border-[1px] border-[#004A50] bg-[#B8D2C3] text-xl font-bold rounded-3xl"><p className='px-3 py-1 font-bold'>+ 4P</p></div>
                     </div>,
                     document.body
                 )}
             </div>
             <Layout isNavbarVisible={isNavbarVisible}/>
         </>
-    )
+    );
 }
 
-export default Miner
-
-/*  #B8D2C3  
-9CB2A4  */
+export default Miner;

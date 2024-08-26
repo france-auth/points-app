@@ -6,7 +6,6 @@ import Image from 'next/image';
 import TierModal from '@/components/TierModal';
 import LoveModal from '@/components/LoveModal';
 import BatteryModal from '@/components/BatteryModal';
-import { batteryModal } from '@/public/assets/images';
 import { love } from '@/data';
 import { fullHeart, emptyHeart, halfBattery, fullBattery, emptyBattery} from '@/public/assets/images';
 
