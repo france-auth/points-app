@@ -67,28 +67,28 @@ export const dashCards = [
         id: 1,
         title: "Total Users",
         figure: "5,203",
-        increase: "+20.1%",
+        increase: "+20.1% from last month",
         icon: usersIcon
     },
     {
         id: 2,
         title: "Daily Active Users",
         figure: "2,370",
-        increase: "+12.54%",
+        increase: "+12.54% from yesterday",
         icon: usersIcon
     },
     {
         id: 3,
         title: "Active Now",
         figure: "+529",
-        increase: "+7.15%",
+        increase: "+7.15% since the last 1h",
         icon: usersIcon
     },
     {
         id: 4,
         title: "New Users",
         figure: "+460",
-        increase: "+19.31%",
+        increase: "+19.31% since the last 12h",
         icon: usersIcon
     }
 ]
@@ -97,9 +97,17 @@ export const dashCards = [
 
 export const users = [
     {
+        id: 0,
+        pfp: user1,
+        username: "Username",
+        date: "Date",
+        time: "Time"
+        
+    },
+    {
         id: 1,
         pfp: user1,
-        username: "John Doe",
+        username: "@billy",
         date: "2024-09-01",
         time: "16:00"
         
@@ -107,7 +115,7 @@ export const users = [
     {
         id: 2,
         pfp: user2,
-        username: "John Doe",
+        username: "@john_doe",
         date: "2024-09-01",
         time: "16:00"
         
@@ -115,7 +123,7 @@ export const users = [
     {
         id: 3,
         pfp: user3,
-        username: "John Doe",
+        username: "@alice",
         date: "2024-09-01",
         time: "16:00"
         
@@ -123,7 +131,7 @@ export const users = [
     {
         id: 4,
         pfp: user4,
-        username: "John Doe",
+        username: "@_johnson",
         date: "2024-09-01",
         time: "16:00"
         
@@ -131,7 +139,7 @@ export const users = [
     {
         id: 5,
         pfp: user5,
-        username: "John Doe",
+        username: "@emma",
         date: "2024-09-01",
         time: "16:00"
         
@@ -139,7 +147,7 @@ export const users = [
     {
         id: 6,
         pfp: user6,
-        username: "John Doe",
+        username: "@michael_",
         date: "2024-09-01",
         time: "16:00"
         
@@ -147,7 +155,7 @@ export const users = [
     {
         id: 7,
         pfp: user7,
-        username: "John Doe",
+        username: "@sophia",
         date: "2024-09-01",
         time: "16:00"
         
@@ -155,7 +163,7 @@ export const users = [
     {
         id: 8,
         pfp: user8,
-        username: "John Doe",
+        username: "@_oliva",
         date: "2024-09-01",
         time: "16:00"
         
@@ -163,7 +171,7 @@ export const users = [
     {
         id: 9,
         pfp: user9,
-        username: "John Doe",
+        username: "@liam",
         date: "2024-09-01",
         time: "16:00"
         
@@ -171,7 +179,7 @@ export const users = [
     {
         id: 10,
         pfp: user10,
-        username: "John Doe",
+        username: "@noah_x",
         date: "2024-09-01",
         time: "16:00"
         

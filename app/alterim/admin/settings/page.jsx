@@ -13,7 +13,7 @@ const Settings = () => {
           {settings.map((setting, index) => (
             <div key={index}
             className={`flex my-6 border-b-[2px] border-b-[#gray] justify-between text-sm text-[${setting.color}]`}>
-              <div className='flex justify-start font-semibold w-1/2'>
+              <div className='flex justify-start font-medium w-1/2'>
                 <p>{setting.name}</p>
               </div>
               <div className='flex justify-start w-[40%]'>
