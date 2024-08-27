@@ -112,7 +112,7 @@ const Message = () => {
                                 Chat recharge in 8h 12m 22s
                             </p>
                             <Link href={`/item`}
-                            className="xs:mr-1 absolute right-2 mr-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-white text-sm">
+                            className="xs:mr-1 absolute right-2 mr-4 top-1/2 transform -translate-y-1/2 cursor-pointer text-white text-sm">
                                 BUY ITEM
                             </Link>
                         </div>
@@ -130,7 +130,7 @@ const Message = () => {
                     {!isSubmitting && !displayText && isChatRemaining && (
                         <button
                             type="submit"
-                            className={`font-bold xs:mr-1 absolute right-2 mr-3 top-1/2 transform -translate-y-1/2 cursor-pointer ${inputValue ? "" : "text-[#8FA3A4]"}`}
+                            className={`font-bold xs:mr-1 absolute right-2 mr-4 top-1/2 transform -translate-y-1/2 cursor-pointer ${inputValue ? "" : "text-[#8FA3A4]"}`}
                         >
                             SEND
                         </button>
