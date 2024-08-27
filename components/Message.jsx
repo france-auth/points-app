@@ -76,7 +76,7 @@ const Message = () => {
                 {/* Input Form */}
                 <form
                     onSubmit={handleSubmit}
-                    className="flex justify-end w-full relative px-4 pb-3"
+                    className="flex justify-end w-full relative px-2 pb-3"
                 >
                     <input
                         type="text"
