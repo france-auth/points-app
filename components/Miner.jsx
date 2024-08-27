@@ -33,30 +33,30 @@ const Miner = ({handleMinerClick, displayText, hasSubmitted}) => {
 
     return (
         <>
-        <div className='flex w-full justify-center items-center bg-[#9CB2A4] border-y-[1px] border-[#004A50] p-7'
-        style={{  backgroundColor: '#9CB2A4' }}>
-            <div
-                onClick={handleClick} 
-                style={{position: "relative"}}
-                className='flex bg-[#C4DACC] justify-center items-center w-[14rem] h-[16rem] rounded-3xl my-2 border-[1px] border-[#004A50] cursor-pointer'>
-                    <Image 
-                        src={miner}
-                        alt='miner image'
-                    />
-            </div>
-            {animations.map(({ id, x, y }) => (
+            <div className='flex w-full justify-center items-center bg-[#9CB2A4] border-y-[1px] border-[#004A50] p-7'
+            style={{  backgroundColor: '#9CB2A4' }}>
                 <div
-                    key={id}
-                    className="absolute animate-fly-up-fade"
-                    style={{ top: y, left: x, transform: 'translate(-50%, -50%)', position: 'absolute' }}
-                >
-                    <div className="border-[1px] border-[#004A50] bg-[#B8D2C3] text-xl font-bold rounded-3xl">
-                        <p className='px-3 py-1 font-bold'>+ 4P</p>
-                    </div>
+                    onClick={handleClick} 
+                    style={{position: "relative"}}
+                    className='flex bg-[#C4DACC] justify-center items-center w-[14rem] h-[16rem] rounded-3xl my-2 border-[1px] border-[#004A50] cursor-pointer'>
+                        <Image 
+                            src={miner}
+                            alt='miner image'
+                        />
                 </div>
-            ))}
-        </div>
-        <Layout isNavbarVisible={isNavbarVisible}/>
+                {animations.map(({ id, x, y }) => (
+                    <div
+                        key={id}
+                        className="absolute animate-fly-up-fade"
+                        style={{ top: y, left: x, transform: 'translate(-50%, -50%)', position: 'absolute' }}
+                    >
+                        <div className="border-[1px] border-[#004A50] bg-[#B8D2C3] text-xl font-bold rounded-3xl">
+                            <p className='px-3 py-1 font-bold'>+ 4P</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <Layout isNavbarVisible={isNavbarVisible}/>
         </>
     );
 }
