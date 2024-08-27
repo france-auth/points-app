@@ -50,30 +50,33 @@ const Message = () => {
     return (
         <>
             <Miner handleMinerClick={handleMinerClick} hasSubmitted={hasSubmitted} displayText={displayText} />
-            <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-center items-center">
-                {/* User's Message */}
-                <div className="w-full px-3 py-2 xs:text-sm flex flex-col items-end mt-0">
-                    <p className="bg-[#F5F5F5] w-[80%] text-xs text-right rounded-xl px-3 py-2">
-                        What's the latest in the crypto world today?
-                    </p>
-                    <p className="text-[.6rem] mr-2 mt-1">Sat 5:09AM</p>
+            <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-between items-center h-[45vh] max-h-[45vh] overflow-hidden">
+                {/* Messages Container */}
+                <div className="flex-1 w-full overflow-y-auto p-3 space-y-4">
+                    {/* User's Message */}
+                    <div className="w-full flex flex-col items-end">
+                        <p className="bg-[#F5F5F5] w-[80%] text-xs text-right rounded-xl px-3 py-2">
+                            What's the latest in the crypto world today?
+                        </p>
+                        <p className="text-[.6rem] mr-2 mt-1">Sat 5:09AM</p>
+                    </div>
+
+                    {/* Bot's Message */}
+                    <div className="w-full flex flex-col items-start">
+                        <p className="bg-[#F5F5F5] w-[80%] text-xs text-left rounded-xl px-4 py-2">
+                            It's the talk of the town! $ATRM is all about revolutionizing
+                            digital interactions with AI. Gonna be HUGE!
+                        </p>
+                        <p className="text-[.6rem] ml-2 mt-1">
+                            Sat 5:10AM <span className="ml-2">+500P</span>
+                        </p>
+                    </div>
                 </div>
 
-                {/* Bot's Message */}
-                <div className="w-full px-3 py-2 flex flex-col xs:text-sm items-start">
-                    <p className="bg-[#F5F5F5] w-[80%] min-w-min text-xs text-left rounded-xl px-4 py-2">
-                        It's the talk of the town! $ATRM is all about revolutionizing
-                        digital interactions with AI. Gonna be HUGE!
-                    </p>
-                    <p className="text-[.6rem] ml-2 mt-1">
-                        Sat 5:10AM <span className="ml-2">+500P</span>
-                    </p>
-                </div>
-
-                {/* INPUT Form */}
+                {/* Input Form */}
                 <form
                     onSubmit={handleSubmit}
-                    className="flex justify-end xs:w-screen-minus-3rem mb-1 w-full relative"
+                    className="flex justify-end w-full relative pb-3"
                 >
                     <input
                         type="text"
@@ -88,31 +91,35 @@ const Message = () => {
                         onChange={handleInputChange}
                         required
                         disabled={!isChatRemaining || isSubmitting || displayText === "TAP THE FACE"}
-                        className={`w-full mb-0 mt-3 xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-lg border outline[.5px] ${
+                        className={`w-full mb-0 mt-3 xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-xl border-[.5px] ${
                             !isChatRemaining
                                 ? "bg-[#004A50]"
                                 : isSubmitting
                                 ? "bg-[#8FA3A4]"
                                 : "bg-white"
-                        }`}
+                        } ${
+                            inputValue 
+                            ? "border-[#004A50] " 
+                            : "border-[#8FA3A4]"
+                        } focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100`}
                     />
 
                     {!isChatRemaining ? (
                         <div
-                            className="absolute left-0 right-0 text-start text-white overflow-y-hidden top-[58%] transform -translate-y-1/2 "
+                            className="absolute left-0 right-0 text-start text-white overflow-y-hidden top-1/2 transform -translate-y-1/2"
                         >
                             <p className="text-white text-sm ml-3">
                                 Chat recharge in 8h 12m 22s
                             </p>
                             <Link href={`/item`}
-                            className="xs:mr-1 absolute right-2 mr-3 top-[60%] transform -translate-y-1/2 cursor-pointer text-white text-sm">
+                            className="xs:mr-1 absolute right-2 mr-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-white text-sm">
                                 BUY ITEM
                             </Link>
                         </div>
                     ) : (
                         (isSubmitting || displayText) && (
                             <div
-                                className="absolute left-0 right-0 text-center text-white font-extrabold top-[56%] transform -translate-y-1/2"
+                                className="absolute left-0 right-0 text-center text-white font-extrabold top-1/2 transform -translate-y-1/2"
                                 style={{ pointerEvents: "none" }}
                             >
                                 {displayText}
@@ -123,7 +130,7 @@ const Message = () => {
                     {!isSubmitting && !displayText && isChatRemaining && (
                         <button
                             type="submit"
-                            className={`font-bold xs:mr-1 absolute right-2 mr-3 mt-[6px] top-1/2 transform -translate-y-1/2 cursor-pointer ${inputValue ? "" : "text-[#8FA3A4]"}`}
+                            className={`font-bold xs:mr-1 absolute right-2 mr-3 top-1/2 transform -translate-y-1/2 cursor-pointer ${inputValue ? "" : "text-[#8FA3A4]"}`}
                         >
                             SEND
                         </button>
@@ -135,23 +142,3 @@ const Message = () => {
 };
 
 export default Message;
-
-
-
-{/*isSubmitting || displayText ? (
-                        <div
-                            className="absolute left-0 right-0 text-center text-white font-extrabold top-[56%] transform -translate-y-1/2"
-                            style={{ pointerEvents: "none" }}
-                        >
-                            {displayText}
-                        </div>
-                    ) : (
-                        <button
-                            type="submit"
-                            className={`font-bold xs:mr-1 absolute right-2 mr-3 mt-[6px] top-1/2 transform -translate-y-1/2 cursor-pointer text-white" ${
-                                inputValue ? "text-white" : ""
-                            }`}
-                        >
-                            SEND
-                        </button>
-                    )  */}
