@@ -45,6 +45,7 @@ const HomePage = () => {
     const userName = "AVERY"; // User Name Variable
     const userRank = "BRONZE"; // User Rank Variable
     const userPoints = "0"; // User Points Variable
+    const health = 100;
 
 
     return (
@@ -89,7 +90,7 @@ const HomePage = () => {
                         <div className="flex ">
                             <p className='flex'>BATTERY</p>
                             <Image
-                            src={fullBattery}
+                            src={health >= 90 ? fullBattery : health >=  40 ? halfBattery :  emptyBattery}
                             alt='battery bar'
                             className="ml-3"/>
                         </div>
