@@ -50,7 +50,7 @@ const Message = () => {
     return (
         <>
             <Miner handleMinerClick={handleMinerClick} hasSubmitted={hasSubmitted} displayText={displayText} />
-            <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-center items-center h-[25rem]">
+            <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-center items-center">
                 {/* User's Message */}
                 <div className="w-full px-3 py-2 xs:text-sm flex flex-col items-end mt-0">
                     <p className="bg-[#F5F5F5] w-[80%] text-xs text-right rounded-xl px-3 py-2">
@@ -88,7 +88,7 @@ const Message = () => {
                         onChange={handleInputChange}
                         required
                         disabled={!isChatRemaining || isSubmitting || displayText === "TAP THE FACE"}
-                        className={`w-full mb-0 mt-3 xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-lg border ${
+                        className={`w-full mb-0 mt-3 xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-lg border outline[.5px] ${
                             !isChatRemaining
                                 ? "bg-[#004A50]"
                                 : isSubmitting
