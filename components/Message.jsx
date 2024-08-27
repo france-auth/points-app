@@ -50,7 +50,7 @@ const Message = () => {
     return (
         <>
             <Miner handleMinerClick={handleMinerClick} hasSubmitted={hasSubmitted} displayText={displayText} />
-            <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-between items-center h-[45vh] max-h-[45vh] overflow-hidden">
+            <div className="p-3 w-full bg-[#C4DACC] flex flex-col justify-between items-center h-[42.5vh] max-h-[42.5vh] overflow-hidden">
                 {/* Messages Container */}
                 <div className="flex-1 w-full overflow-y-auto p-3 space-y-4">
                     {/* User's Message */}
@@ -76,7 +76,7 @@ const Message = () => {
                 {/* Input Form */}
                 <form
                     onSubmit={handleSubmit}
-                    className="flex justify-end w-full relative pb-3"
+                    className="flex justify-end w-full relative px-4 pb-3"
                 >
                     <input
                         type="text"
