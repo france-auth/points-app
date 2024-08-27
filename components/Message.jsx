@@ -88,13 +88,11 @@ const Message = () => {
                         onChange={handleInputChange}
                         required
                         disabled={!isChatRemaining || isSubmitting || displayText === "TAP THE FACE"}
-                        className={`w-full mb-0 mt-3 text-white xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-lg border ${
+                        className={`w-full mb-0 mt-3 xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-lg border ${
                             !isChatRemaining
                                 ? "bg-[#004A50]"
                                 : isSubmitting
                                 ? "bg-[#8FA3A4]"
-                                : inputValue
-                                ? "bg-[#004A50]"
                                 : "bg-white"
                         }`}
                     />
@@ -125,7 +123,7 @@ const Message = () => {
                     {!isSubmitting && !displayText && isChatRemaining && (
                         <button
                             type="submit"
-                            className={`font-bold xs:mr-1 absolute right-2 mr-3 mt-[6px] top-1/2 transform -translate-y-1/2 cursor-pointer ${inputValue ? "text-white" : ""}`}
+                            className={`font-bold xs:mr-1 absolute right-2 mr-3 mt-[6px] top-1/2 transform -translate-y-1/2 cursor-pointer ${inputValue ? "" : "text-[#8FA3A4]"}`}
                         >
                             SEND
                         </button>
