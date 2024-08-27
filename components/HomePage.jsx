@@ -11,7 +11,7 @@ import { fullHeart, emptyHeart, halfBattery, fullBattery, emptyBattery} from '@/
 
 const HomePage = () => {
 
-    const [filledHearts, setFilledHearts] = useState(0); // Number of filled hearts
+    const [filledHearts, setFilledHearts] = useState(5); // Number of filled hearts
 
      // This function is a placeholder that would be called when a task is completed in order to fill the hearts
     const completeTask = () => {
