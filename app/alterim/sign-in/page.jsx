@@ -37,7 +37,7 @@ const SignIn = () => {
     <div className="flex justify-center items-center min-h-screen xs:p-5 xr:p-7">
       <div className="bg-white w-full max-w-md xs:p-7 xr:p-8 rounded-2xl shadow-lg">
         <div className="flex items-center mb-5">
-          <Link href="/alterim/admin/sign-up">
+          <Link href="/alterim/sign-up">
             <div className="flex items-center cursor-pointer">
               <Image src={backArrow} alt="back icon"/>
               <p className="ml-2 text-base text-color">Back</p>

@@ -35,14 +35,14 @@ const SignUp = () => {
   return (
     <div className="flex justify-center items-center xs:min-h-screen xr:h-screen xs:p-5 xr:p-7">
       <div className="bg-white w-full max-w-md xs:p-7 xr:p-8 rounded-xl shadow-lg">
-        <div className="flex items-center mb-5">
-          <Link href="/">
+        {/*<div className="flex items-center mb-5">
+          <Link href="/alter">
             <div className="flex items-center cursor-pointer">
               <Image src={backArrow} alt="back arrow" className="w-6 h-6" />
               <p className="ml-2 text-base text-color">Back</p>
             </div>
           </Link>
-        </div>
+        </div>*/}
         <h2 className="text-xl font-bold text-center text-color text-[#004A50] mb-8">
           Sign Up
         </h2>
