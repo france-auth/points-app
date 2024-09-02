@@ -63,7 +63,7 @@ const SignUp = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
                 />
               </p>
 
@@ -77,7 +77,7 @@ const SignUp = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
                 />
               </p>
 
@@ -91,7 +91,7 @@ const SignUp = () => {
                   value={confirm}
                   onChange={(e) => setConfirm(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
                 />
               </p>
 
