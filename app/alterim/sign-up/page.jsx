@@ -108,7 +108,7 @@ const SignUp = () => {
               <p className="font-normal text-sm">
                 Have an Account already?{" "}
                 <span className="text-color">
-                  <Link href="/alterim/admin/sign-in">
+                  <Link href="/alterim/sign-in">
                     <button type="button"
                     className="font-semibold">Login</button>
                   </Link>
