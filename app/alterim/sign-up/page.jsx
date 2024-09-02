@@ -63,7 +63,7 @@ const SignUp = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
+                  className="w-full py-3 px-5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
                 />
               </p>
 
@@ -77,7 +77,7 @@ const SignUp = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
+                  className="w-full py-3 px-5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
                 />
               </p>
 
@@ -91,14 +91,14 @@ const SignUp = () => {
                   value={confirm}
                   onChange={(e) => setConfirm(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
+                  className="w-full px-5 py-3 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#004A50] focus:ring-opacity-100"
                 />
               </p>
 
               <div className="justify-center items-center mb-6">
                 <button
                   type="submit"
-                  className="w-full py-3 text-white bg-[#1f7882] rounded-lg hover:bg-[#004A50] xs:text-sm xr:text-lg">
+                  className="w-full py-3 px-5 text-white bg-[#1f7882] rounded-xl hover:bg-[#004A50] xs:text-sm xr:text-lg">
                   Create Account
                 </button>
               </div>
