@@ -90,9 +90,9 @@ const HomePage = () => {
                         <div className="flex ">
                             <p className='flex'>BATTERY</p>
                             <Image
-                            src={health >= 90 ? fullBattery : health >=  40 ? halfBattery :  emptyBattery}
+                            src={health >= 90 ? fullBattery : health >=  40 ? halfBattery : emptyBattery}
                             alt='battery bar'
-                            className="ml-3"/>
+                            className="place-self-center ml-3 mt-1"/>
                         </div>
                         <div className='flex  xs:justify-center xr:ml-2 xs:ml-4 justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
                         onClick={openModal3}>

@@ -1,10 +1,9 @@
 "use client"
 
-import {rankings, rankPageButtons } from '@/data';
-import { userIcon } from '@/public/assets/images';
-import Layout from '@/components/Layout';
 import Image from 'next/image';
 import { useState } from 'react';
+import {rankings, rankPageButtons } from '@/data';
+import { userIcon } from '@/public/assets/images';
 
 const Ranking = () => {
 
@@ -53,7 +52,6 @@ const Ranking = () => {
                         <p>TOP 100 MINERS</p>
 
                         <select
-                        name="user-rank" id=""
                         className='outline-none bg-inherit font-semibold'>
                             <option
                             value="gold">GOLD</option>
