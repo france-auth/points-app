@@ -5,12 +5,10 @@ import Image from 'next/image';
 
 const Miner = ({handleMinerClick, displayText, hasSubmitted}) => {
     const [animations, setAnimations] = useState([]);
-    const [isNavbarVisible, setIsNavbarVisible] = useState(false);
 
     const handleClick = (event) => {
         if (displayText === "TAP THE FACE" || hasSubmitted) {
             handleMinerClick();
-            setIsNavbarVisible(true);
             const newAnimation = {
                 id: Date.now(),
                 x: event.clientX,
@@ -52,7 +50,7 @@ const Miner = ({handleMinerClick, displayText, hasSubmitted}) => {
                     </div>
                 ))}
             </div>
-            <Layout isNavbarVisible={isNavbarVisible}/>
+            
         </>
     );
 }
