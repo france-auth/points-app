@@ -43,25 +43,12 @@ const Ranking = () => {
                             <div className='flex items center justify-center'>
                                 <p className='flex items-center font-bold'>{`${userTier}`} <span className='ml-2 font-normal'>{userRank}</span></p>
                             </div>
-                            <p className='flex xs:mt-2 xr:mt-0 items-center'>{`${userPoints}`}</p>
+                            <p className='flex xs:mt-2 xx:mt-0 items-center'>{`${userPoints}`}</p>
                         </div>
                     </div>
 
                     {/** TOP MINERS CARD */}
                     <div>
-{/*                         <select
-                        className='outline-none bg-inherit font-semibold'>
-                            <option
-                            value="gold">GOLD</option>
-                            <option
-                            value="bronze">BRONZE</option>
-                            <option
-                            value="silver">SILVER</option>
-                            <option
-                            value="platinum">PLATINUM</option>
-                            <option
-                            value="diamond">DIAMOND</option>
-                        </select> */}
                         <Dropdown />
                     </div>
 

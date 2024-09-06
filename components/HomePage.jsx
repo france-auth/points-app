@@ -6,12 +6,13 @@ import Image from 'next/image';
 import TierModal from '@/components/TierModal';
 import LoveModal from '@/components/LoveModal';
 import BatteryModal from '@/components/BatteryModal';
-import { love } from '@/data';
-import { fullHeart, emptyHeart, halfBattery, fullBattery, emptyBattery} from '@/public/assets/images';
+import { batteries, love } from '@/data';
+import { fullHeart, emptyHeart, halfBattery, fullBattery, emptyBattery, emptybatterybar, fullbatterybar} from '@/public/assets/images';
 
 const HomePage = () => {
 
     const [filledHearts, setFilledHearts] = useState(5); // Number of filled hearts
+    const [fullBatteryBar, setFullBatteryBar] = useState(10); // Number of full battery bars
 
      // This function is a placeholder that would be called when a task is completed in order to fill the hearts
     const completeTask = () => {
@@ -72,11 +73,13 @@ const HomePage = () => {
                             <h2 className="flex font-normal">LOVE
                             </h2>
                             <div className='flex xr:justify-start items-center ml-2'>
-                                {love.map((love, index) => (
-                                    <Image key={index}
-                                    alt='heart img'
-                                    src={index < filledHearts ? fullHeart : emptyHeart} 
-                                    className='flex ml-1 items-center justify-center xx:mt-[2px]'/>
+                                {love.map((love, id) => (
+                                    <Image 
+                                        key={id}
+                                        alt='heart img'
+                                        src={id < filledHearts ? fullHeart : emptyHeart} 
+                                        className='flex ml-1 items-center justify-center xx:mt-[2px]'
+                                    />
                                 ))}
                             </div> 
                         </div>
@@ -88,11 +91,17 @@ const HomePage = () => {
 
                     <div className='xs:items-center xr:mt-0 xs:mt-2 xs:justify-between flex'>
                         <div className="flex ">
-                            <p className='flex'>BATTERY</p>
-                            <Image
-                            src={health >= 90 ? fullBattery : health >=  40 ? halfBattery : emptyBattery}
-                            alt='battery bar'
-                            className="place-self-center ml-3 mt-1"/>
+                            <h2 className='flex'>BATTERY</h2>
+                            <div className='flex ml-3'>
+                                {batteries.map((battery) => (
+                                    <Image 
+                                        key={battery.id}
+                                        src={battery.id > fullBatteryBar ? emptybatterybar : fullbatterybar}
+                                        alt='battery bar'
+                                        className="mx-[1px] mt-[2px]"
+                                    />
+                                ))}
+                            </div>
                         </div>
                         <div className='flex  xs:justify-center xr:ml-2 xs:ml-4 justify-center w-7 cursor-pointer rounded-full bg-[#B8D2C3]'
                         onClick={openModal3}>

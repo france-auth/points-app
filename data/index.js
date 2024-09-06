@@ -34,7 +34,7 @@ import {
     loveBubble,
     loveBubbleModal,
     bubble,
-    bubbleModal} from '@/public/assets/images/index'
+    bubbleModal, emptybatterybar, fullbatterybar} from '@/public/assets/images/index'
 
 export const hashs = [
     {
@@ -491,8 +491,45 @@ export const love = [
     }
 ]
 
-export const dropdownItems = [
+export const batteries = [
     {
-        
-    }
+        id: 1,
+        img: fullbatterybar
+    },
+    {
+        id: 2,
+        img: fullbatterybar
+    },
+    {
+        id: 3,
+        img: fullbatterybar
+    },
+    {
+        id: 4,
+        img: fullbatterybar
+    },
+    {
+        id: 5,
+        img: fullbatterybar
+    },
+    {
+        id: 6,
+        img: fullbatterybar
+    },
+    {
+        id: 7,
+        img: fullbatterybar
+    },
+    {
+        id: 8,
+        img: fullbatterybar
+    },
+    {
+        id: 9,
+        img: fullbatterybar
+    },
+    {
+        id: 10,
+        img: fullbatterybar
+    },
 ]
