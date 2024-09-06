@@ -34,7 +34,7 @@ const Invite = () => {
 
 
     {return !hasReferrals ? (
-            <Layout isNavbarVisible={true}>
+            <main>
                 <InviteModal 
                 isOpen={showModal} 
                 isClosed={closeModal}
@@ -55,9 +55,9 @@ const Invite = () => {
                         >SHARE CODE TO FRENS</button>
                     </div>
                 </div>
-            </Layout>
+            </main>
         ) : (
-                <Layout isNavbarVisible={true}>
+                <main>
                     <InviteModal 
                     isOpen={showModal} 
                     isClosed={closeModal}
@@ -103,7 +103,7 @@ const Invite = () => {
                         </div>
                         </div>
                     </div>
-                </Layout>
+                </main>
         )
     }
 }

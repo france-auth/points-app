@@ -63,7 +63,7 @@ const SignUp = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-lg border focus:ring focus:ring-[#1f7882]"
+                  className="w-full px-4 py-3 rounded-lg border-[.5px] border-[#004A50] active:outline-0 focus:border-r-orange-100"
                 />
               </p>
 

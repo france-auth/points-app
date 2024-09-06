@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Miner from "@/components/Miner";
 import Link from "next/link";
+import Layout from "./Layout";
 
 const Message = () => {
     const [inputValue, setInputValue] = useState("");
@@ -48,11 +49,11 @@ const Message = () => {
     };
 
     return (
-        <>
+        <main>
             <Miner handleMinerClick={handleMinerClick} hasSubmitted={hasSubmitted} displayText={displayText} />
             <div className="p-3 px-4 w-full bg-[#C4DACC] flex flex-col justify-between items-center h-[42.5vh] max-h-[42.5vh] overflow-hidden">
                 {/* Messages Container */}
-                <div className="flex-1 w-full overflow-y-auto p-3 space-y-4">
+                <div className="flex-1 w-full hide-scrollbar overflow-y-auto p-3 space-y-4">
                     {/* User's Message */}
                     <div className="w-full flex flex-col items-end">
                         <p className="bg-[#F5F5F5] w-[80%] text-xs text-right rounded-xl px-3 py-2">
@@ -137,7 +138,7 @@ const Message = () => {
                     )}
                 </form>
             </div>
-        </>
+        </main>
     );
 };
 

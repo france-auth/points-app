@@ -24,7 +24,7 @@ const Ranking = () => {
 
 
     return (
-        <Layout  isNavbarVisible={true}>
+        <main>
             <div className='bg-[#9CB2A4] min-h-screen p-4'>
                 <div className='w-full bg-transparent flex flex-col'>
                     <div className='flex justify-center items-center'>
@@ -114,7 +114,7 @@ const Ranking = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </main>
     )
 }
 

@@ -1,4 +1,45 @@
-"use client"
+"use client";
+
+import React, { useState } from "react";
+
+const NavBar = ({ navLinks, onNavItemClick, isVisible, activeComponent }) => {
+    const [isOnboarding, setOnboarding] = useState(false);
+
+    if (!navLinks || !Array.isArray(navLinks)) {
+        return null;
+    }
+
+    return (
+        <div>
+        {isOnboarding || !isVisible ? null : (
+            <div>
+            <ul className="xs:px-1 bg-[#C4DACC] xx:px-2 xs:w-full flex px-2 py-3 mt-1 mb-3 list-none justify-center">
+                {navLinks.map((nav) => (
+                <button
+                    key={nav.id}
+                    onClick={() => onNavItemClick(nav.title)}
+                    className={`flex xs:px-1 xs:text-[15px] xx:text-base xx:px-2 px-2 py-2 ${
+                        activeComponent === nav.title.toLowerCase()
+                        ? "underline font-bold"
+                        : ""
+                    }`}>
+                    {nav.title}
+                </button>
+                ))}
+            </ul>
+            <hr className="border-[#004A50]" />
+            </div>
+        )}
+        </div>
+    );
+};
+
+export default NavBar;
+
+
+
+
+/* "use client"
 
 import React from 'react'
 import Link from 'next/link'
@@ -46,4 +87,4 @@ const NavBar = ({ navLinks, isVisible }) => {
     )
 }
 
-export default NavBar
+export default NavBar */

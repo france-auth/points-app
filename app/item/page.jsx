@@ -24,7 +24,7 @@ const Item = () => {
 
 
     return (
-        <Layout isNavbarVisible={true}>
+        <main>
             <PurchaseModal show={showModal} close={closeModal} item={selectedItem}/>
 
             {/** BACKGROUNDS */}
@@ -155,7 +155,7 @@ const Item = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </main>
     )
 }
 
