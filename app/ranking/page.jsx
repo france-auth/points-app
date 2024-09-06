@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import {rankings, rankPageButtons } from '@/data';
 import { userIcon } from '@/public/assets/images';
+import Dropdown from '@/components/Dropdown';
 
 const Ranking = () => {
 
@@ -47,11 +48,8 @@ const Ranking = () => {
                     </div>
 
                     {/** TOP MINERS CARD */}
-                    <div className='flex justify-center items-center'>
-                    <div className='flex justify-between p-4 w-full rounded-xl border border-[#004A50] bg-[#C4DACC]'>
-                        <p>TOP 100 MINERS</p>
-
-                        <select
+                    <div>
+{/*                         <select
                         className='outline-none bg-inherit font-semibold'>
                             <option
                             value="gold">GOLD</option>
@@ -63,8 +61,8 @@ const Ranking = () => {
                             value="platinum">PLATINUM</option>
                             <option
                             value="diamond">DIAMOND</option>
-                        </select>
-                    </div>
+                        </select> */}
+                        <Dropdown />
                     </div>
 
                     {/** RANKINGS */}
