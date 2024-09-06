@@ -92,13 +92,13 @@ const HomePage = () => {
                     <div className='xs:items-center xr:mt-0 xs:mt-2 xs:justify-between flex'>
                         <div className="flex ">
                             <h2 className='flex'>BATTERY</h2>
-                            <div className='flex ml-3'>
+                            <div className='flex ml-3 mr-2'>
                                 {batteries.map((battery) => (
                                     <Image 
                                         key={battery.id}
                                         src={battery.id > fullBatteryBar ? emptybatterybar : fullbatterybar}
                                         alt='battery bar'
-                                        className="mx-[1px] mt-[2px]"
+                                        className="mx-[.5px] mt-[2px]"
                                     />
                                 ))}
                             </div>

@@ -123,7 +123,11 @@ const Message = () => {
                         ) : (
                             (isSubmitting || displayText) && (
                                 <div
-                                    className="absolute left-0 right-0 text-center text-white font-extrabold top-1/2 transform -translate-y-1/2"
+                                    className={`absolute left-0 right-0 text-center text-white font-extrabold transform -translate-y-1/2 
+                                        ${displayText === "..." 
+                                            ? "top-[45%]" 
+                                            : "top-1/2"
+                                        }`}
                                     style={{ pointerEvents: "none" }}
                                 >
                                     {displayText}
