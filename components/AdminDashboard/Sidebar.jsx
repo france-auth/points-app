@@ -39,16 +39,16 @@ const Sidebar = ({ navItems }) => {
                 src={nav.icon2}
                 alt={`${nav.title}`}
                 className=" sm:mr-2"
-                height='xs:18px xx:20px xr:24px'
-                width='xs:18px xx:20px xr:24px' // Specify height and width for the image
+                height='xs:16px xx:18px xr:20px'
+                width='xs:16px xx:18px xr:20px' // Specify height and width for the image
               />
             ) : (
               <Image
                 src={nav.icon}
                 alt={`${nav.title}`}
                 className=" sm:mr-2"
-                height='xs:18px xx:20px xr:24px'
-                width='xs:18px xx:20px xr:24px' // Specify height and width for the image
+                height='xs:16px xx:18px xr:20px'
+                width='xs:16px xx:18px xr:20px' // Specify height and width for the image
               />
             )}
             <p

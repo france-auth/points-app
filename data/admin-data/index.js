@@ -101,7 +101,8 @@ export const users = [
         pfp: user1,
         username: "Username",
         date: "Date",
-        time: "Time"
+        time: "Time",
+        timmy: "Time"
         
     },
     {
@@ -109,7 +110,8 @@ export const users = [
         pfp: user1,
         username: "@billy",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -117,7 +119,8 @@ export const users = [
         pfp: user2,
         username: "@john_doe",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -125,7 +128,8 @@ export const users = [
         pfp: user3,
         username: "@alice",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -133,7 +137,8 @@ export const users = [
         pfp: user4,
         username: "@_johnson",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -141,7 +146,8 @@ export const users = [
         pfp: user5,
         username: "@emma",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -149,7 +155,8 @@ export const users = [
         pfp: user6,
         username: "@michael_",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -157,7 +164,8 @@ export const users = [
         pfp: user7,
         username: "@sophia",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -165,7 +173,8 @@ export const users = [
         pfp: user8,
         username: "@_oliva",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -173,7 +182,8 @@ export const users = [
         pfp: user9,
         username: "@liam",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
     {
@@ -181,7 +191,8 @@ export const users = [
         pfp: user10,
         username: "@noah_x",
         date: "2024-09-01",
-        time: "16:00"
+        time: "16:00",
+        timmy: "16:00"
         
     },
 ]
