@@ -210,12 +210,12 @@ export const settings = [
     },
     {
         name: "Language",
-        value: "English",
+        value: "english",
         color: "#004850"
     },
     {
         name: "Theme",
-        value: "Light",
+        value: "light",
         color: "#004850"
     }
 ]
