@@ -95,7 +95,7 @@ const Message = () => {
                             onChange={handleInputChange}
                             required
                             disabled={!isChatRemaining || isSubmitting || displayText === "TAP THE FACE"}
-                            className={`w-full mb-0 mt-3 xs:placeholder:text-xs xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-xl border-[.5px] ${
+                            className={`w-full mb-0 mt-3 xs:placeholder:text-xs placeholder:pl-2 xs:px-2 text-sm xs:font-normal font-medium px-5 py-3 rounded-xl border-[.5px] ${
                                 !isChatRemaining
                                     ? "bg-[#004A50]"
                                     : isSubmitting
