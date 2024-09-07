@@ -15,7 +15,7 @@ const Users = () => {
             {users.map((user, index) => (
               <div
                 key={user.id}
-                className='flex p-3 border border-[#004a50] overflow-auto xs:min-w-[150%] md:min-w-[110%]  bg-white rounded-lg items-center justify-around'
+                className={`flex p-3 border border-[#004a50] overflow-auto xs:min-w-[150%] sm:min-w-[110%] md:min-w-full  bg-white rounded-lg items-center justify-around ${users.length - 1 === user.id ? "border-b-[#004A50]" : "border-b-0"}`}
               >
                   <Image
                     src={user.pfp}
@@ -29,21 +29,21 @@ const Users = () => {
                     ? "font-bold text-base" 
                     : ""
                     }`}>
-                      {user.username}
+                      {index === 0 ? user.username?.toUpperCase() : user.username}
                     </p>
                   <p className={`flex mx-auto  
                     ${index === 0 
                     ? "font-bold text-base" 
                     : ""
                     }`}>
-                    {user.date}
+                    {index === 0 ? user.date?.toUpperCase() : user.date}
                   </p>
-                  <p className={`flex ml-auto mr-5 
+                  <p className={`flex ml-auto mr-7 
                     ${index === 0 
-                    ? "font-bold text-base" 
+                    ? "font-bold text-base mr-9" 
                     : ""
                     }`}>
-                    {user.time}
+                    {index === 0 ? user.time?.toUpperCase() : user.time}
                   </p>
                 </div>
               ))}

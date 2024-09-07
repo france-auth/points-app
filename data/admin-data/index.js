@@ -101,17 +101,14 @@ export const users = [
         pfp: user1,
         username: "Username",
         date: "Date",
-        time: "Time",
-        timmy: "Time"
-        
+        time: "Time"        
     },
     {
         id: 1,
         pfp: user1,
         username: "@billy",
         date: "2024-09-01",
-        time: "16:00",
-        timmy: "16:00"
+        time: "16:00"
         
     },
     {
@@ -119,8 +116,7 @@ export const users = [
         pfp: user2,
         username: "@john_doe",
         date: "2024-09-01",
-        time: "16:00",
-        timmy: "16:00"
+        time: "16:00"
         
     },
     {
@@ -128,8 +124,7 @@ export const users = [
         pfp: user3,
         username: "@alice",
         date: "2024-09-01",
-        time: "16:00",
-        timmy: "16:00"
+        time: "16:00"
         
     },
     {
@@ -191,8 +186,7 @@ export const users = [
         pfp: user10,
         username: "@noah_x",
         date: "2024-09-01",
-        time: "16:00",
-        timmy: "16:00"
+        time: "16:00"
         
     },
 ]
