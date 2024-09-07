@@ -24,10 +24,10 @@ const PurchaseModal = ({show, close, item}) => {
     
     return (!show ? null : (
         <div
-        className={`fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]
+        className={`fixed inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 xs:p-3 xr:p-7 flex justify-center items-center z-[999]
         `}>
             <div
-            className={`flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-[23rem]
+            className={`flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-full
             ${isClosing ? 'modal-animate-out' : 'modal-animate-in'}`}>
                 <div className='flex flex-col'>
                     <Image 
@@ -45,7 +45,7 @@ const PurchaseModal = ({show, close, item}) => {
 
                 <div className='flex flex-col items-center px-3 justify-center'>
                         <p
-                        className='text-sm mb-3 mt-8 font-semibold text-nowrap'>
+                        className='text-sm mb-3 mt-8 font-semibold'>
                             {item.name} ({item.price})
                         </p>
                         <p className='text-center'>

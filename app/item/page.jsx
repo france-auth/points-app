@@ -50,7 +50,7 @@ const Item = () => {
                         </div>
                     </div>
                     
-                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-[25rem] border-[#9CB2A4]'></hr>
+                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-full border-[#9CB2A4]'></hr>
 
 
 
@@ -74,7 +74,7 @@ const Item = () => {
                         </div>
                     </div>
                     
-                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-[25rem] border-[#9CB2A4]'></hr>
+                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-full border-[#9CB2A4]'></hr>
 
 
 
@@ -127,7 +127,7 @@ const Item = () => {
                             ))}
                         </div>
                     </div>
-                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-[25rem] border-[#9CB2A4]'></hr>
+                    <hr className='flex flex-col items-center justify-center mx-auto my-4 w-full border-[#9CB2A4]'></hr>
 
 
 
