@@ -4,7 +4,7 @@ const DashboardLayout = ({ children }) => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-grow p-6">
+      <div className="flex-grow p-3">
         {children}
       </div>
     </div>

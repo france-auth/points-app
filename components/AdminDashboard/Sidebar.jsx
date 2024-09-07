@@ -25,12 +25,12 @@ const Sidebar = ({ navItems }) => {
 
   return (
     <div className="flex sticky top-0 h-screen">
-      <ul className="bg-white  flex flex-col xs:px-3 md:pl-8 md:pr-0 xs:py-6 xx:py-10 justify-start ">
+      <ul className="bg-white flex flex-col xs:px-3 md:pl-8 md:pr-0 xs:py-6 xx:py-10 justify-start ">
         {navItems.map((nav) => (
           <Link
             key={nav.id}
             href={nav.path} // Corrected invocation
-            className={`flex items-center xs:px-3 xs:text-[15px] xx:text-base rounded-xl xx:px-4 md:px-5 py-3 my-2 justify-start ${
+            className={`flex items-center xs:px-3 xs:text-[15px] xx:text-base rounded-xl xx:px-4 md:pl-4 md:pr-9 py-3 my-2 justify-start ${
               activePath === nav.path ? "bg-[#004A50] text-white" : ""
             }`}
           >
@@ -56,7 +56,7 @@ const Sidebar = ({ navItems }) => {
                 activePath === nav.path
                   ? "text-white font-semibold"
                   : ""
-              } hidden md:flex`} // Conditionally render based on screen size
+              } hidden md:flex sm:text-xs md:text-sm`} // Conditionally render based on screen size
             >
               {nav.title}
             </p>
