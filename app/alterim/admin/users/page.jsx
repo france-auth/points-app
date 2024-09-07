@@ -15,32 +15,32 @@ const Users = () => {
             {users.map((user, index) => (
               <div
                 key={user.id}
-                className={`flex p-3 border border-[#004a50] overflow-auto xs:min-w-[150%] sm:min-w-[110%] md:min-w-full  bg-white rounded-lg items-center justify-around ${users.length - 1 === user.id ? "border-b-[#004A50]" : "border-b-0"}`}
+                className={`flex p-3 border border-[#004a50] overflow-auto xs:min-w-[165%] xr:min-w-[150%] sm:min-w-[110%] md:min-w-full  bg-white rounded-lg items-center justify-around ${users.length - 1 === user.id ? "border-b-[#004A50]" : "border-b-0"}`}
               >
                   <Image
                     src={user.pfp}
                     alt='user pfp'
                     height={50}
                     width={50}
-                    className='flex mr-12'
+                    className='flex mr-4'
                   />
-                  <p className={`flex mr-auto
+                  <p className={`flex text-sm mr-auto
                     ${index === 0 
                     ? "font-bold text-base" 
                     : ""
                     }`}>
                       {index === 0 ? user.username?.toUpperCase() : user.username}
                     </p>
-                  <p className={`flex mx-auto  
+                  <p className={`flex text-sm mx-auto  
                     ${index === 0 
                     ? "font-bold text-base" 
                     : ""
                     }`}>
                     {index === 0 ? user.date?.toUpperCase() : user.date}
                   </p>
-                  <p className={`flex ml-auto mr-7 
+                  <p className={`flex text-sm ml-auto mr-4 
                     ${index === 0 
-                    ? "font-bold text-base mr-9" 
+                    ? "font-bold text-base mr-6" 
                     : ""
                     }`}>
                     {index === 0 ? user.time?.toUpperCase() : user.time}
