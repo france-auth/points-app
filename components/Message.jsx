@@ -59,10 +59,10 @@ const Message = () => {
                     <div className="flex-1 w-full hide-scrollbar overflow-y-auto p-3 space-y-4">
                         {/* User's Message */}
                         <div className="w-full flex flex-col items-end">
-                            <p className="bg-[#F5F5F5] w-full text-xs text-right rounded-xl px-3 py-2">
+                            <p className="bg-[#F5F5F5] w-[80%] text-xs text-right rounded-xl px-3 py-2">
                                 What's the latest in the crypto world today?
                             </p>
-                            <p className="text-[.6rem] mr-2 mt-1">Sat 5:09AM</p>
+                            <p className="text-nowrap w-max text-[.6rem] mr-2 mt-1">Sat 5:09AM</p>
                         </div>
 
                         {/* Bot's Message */}
@@ -71,7 +71,7 @@ const Message = () => {
                                 It's the talk of the town! $ATRM is all about revolutionizing
                                 digital interactions with AI. Gonna be HUGE!
                             </p>
-                            <p className="text-[.6rem] ml-2 mt-1">
+                            <p className="text-nowrap w-max text-[.6rem] ml-2 mt-1">
                                 Sat 5:10AM <span className="ml-2">+500P</span>
                             </p>
                         </div>

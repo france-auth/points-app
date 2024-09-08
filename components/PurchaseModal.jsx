@@ -45,10 +45,10 @@ const PurchaseModal = ({show, close, item}) => {
 
                 <div className='flex flex-col items-center px-3 justify-center'>
                         <p
-                        className='text-sm mb-3 mt-8 font-semibold'>
+                        className='mt-8 font-semibold'>
                             {item.name} ({item.price})
                         </p>
-                        <p className='text-center'>
+                        <p className='text-center text-sm'>
                             {item.info}
                         </p>
                 </div>

@@ -26,7 +26,7 @@ const TierModal = ({isOpen, isClosed}) => {
 
     return (!isOpen ? null : (
         <div
-        className='fixed xs:p-3 xr:p-7 inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
+        className='fixed xs:p-3 xx:p-5 xr:p-7 inset-0 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
             <div
             className={`flex flex-col bg-[#CEE4D6] rounded-3xl p-4 w-full
             ${isClosing ? 'modal-animate-out' : 'modal-animate-in'}`}>
