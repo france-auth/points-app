@@ -27,7 +27,7 @@ const InviteModal = ({isOpen, isClosed, referralCode, onCopy, copied}) => {
 
     return (!isOpen ? null : (
         <div
-        className='fixed inset-0 xs:p-3 xx:p-6 xr:p-8 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
+        className='fixed inset-0 xs:p-3 xx:p-6 xr:p-7 bg-[#C4DACC] bg-opacity-25 backdrop-brightness-50 flex justify-center items-center z-[999]'>
             <div
             className={`flex flex-col bg-[#CEE4D6] rounded-3xl p-4  w-full
             ${isClosing ? 'modal-animate-out' : 'modal-animate-in'}`}>
@@ -40,7 +40,7 @@ const InviteModal = ({isOpen, isClosed, referralCode, onCopy, copied}) => {
                     onClick={handleClose}/>
 
                     <p
-                    className='flex xs:text-sm justify-center font-semibold mt-3 mb-4 mx-auto'>
+                    className='flex xs:text-sm xx:text-base justify-center font-semibold mt-3 mb-4 mx-auto'>
                         Invitation Rewards:
                     </p>
                 </div>
@@ -49,7 +49,7 @@ const InviteModal = ({isOpen, isClosed, referralCode, onCopy, copied}) => {
                     {inviteRewards.map((reward) => (
                         <li
                         key={reward.id}
-                        className=' xs:my-1 xr:text-[15px] xr:my-2 xs:text-[13px] justify-center'>
+                        className=' xs:my-1 xx:text-sm xx:my-2 xs:text-[13px] justify-center'>
                             {reward.invite}
                         </li>
                     ))}
